@@ -2,18 +2,43 @@
 // base Tieto colors
 ////////////////////
 // Colors from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
-// If you need any other color, please use this guide!
+// We use Tieto Style Guide -> $tsg-..... namespace.
 ////////////////////
-// If you need transparent colors use rgba colors: rgba($doveGray, .3) or use sass opacify: opacify($doveGray, .3), or any other sass color method!
+// If you need transparent colors use rgba colors: rgba($tsg-dove-grey, .3) or use sass opacify: opacify($tsg-dove-grey, .3), or any other sass color method!
 ////////////////////
 
-$white: #ffffff;
-$dark: #333333;
+$white: #fff;
+$black: #000;
 
-$pictonBlue: #62B3E5;
-$bahamaBlue: #0065A0;
+// Primary colour
+$tsg-picton-blue: #62B3E5;
 
-$buttonBgr: #F8F8F8;
+// Blue in user interfaces
+$tsg-picton-blue: #2C89C3;
 
-$tsg_iron-gray: #eeeff0;
-$tsg-dove-gray: #5E5E5E;
+// Supporting colours
+$tsg-deep-blush: #E56385;
+$tsg-apple: #6CC04A;
+$tsg-cornflower: #F78D2D;
+
+// Secondary colours
+$tsg-cornfolwer-1: #9ACAEB;
+$tsg-bahama-blue: #0065A0;
+$tsg-azalea: #F0B3CA;
+$tsg-razzmatazz: #D51067;
+$tsg-yellow-green: #BDE093;
+$tsg-fun-green: #00833E;
+$tsg-macaroni-and-cheese: #FFBE85;
+$tsg-tenn: #D75F00;
+
+// Greyscale colours
+$tsg-alabaster: #F8F8F8;
+$tsg-iron: #EEEFF0;
+$tsg-mercury: #E5E3E3;
+$tsg-alto: #D2D2D2;
+$tsg-silver: #C1C1C1;
+$tsg-silver-chalice: #999;
+$tsg-boulder: #7B7B7B;
+$tsg-dove-grey: #5E5E5E;
+$tsg-mine-shaft: #333;
+
