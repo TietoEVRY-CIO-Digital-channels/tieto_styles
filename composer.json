@@ -1,0 +1,8 @@
+{
+  "name": "brainsum/tieto_styles",
+  "description": "Generic Tieto style components.",
+  "type": "library",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
