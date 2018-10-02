@@ -9,7 +9,13 @@ Generic Tieto style components.
   "url": "https://github.com/brainsum/tieto_styles"
 }
 ```
+- We are using alpha release, add minimum stability:
+```
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+```
 - Require as a dev dependency
 ```
-composer require --dev brainsum/tieto_styles
+composer require --dev brainsum/tieto_styles:^1.0
 ```
+
