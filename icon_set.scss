@@ -1,10 +1,6 @@
 @font-face {
   font-family: 'Lovicons';
-  src:  url('../../vendor/tieto_styles/icon_set/Lovicons.eot?pwbau9');
-  src:  url('../../vendor/tieto_styles/icon_set/Lovicons.eot?pwbau9#iefix') format('embedded-opentype'),
-    url('../../vendor/tieto_styles/icon_set/Lovicons.ttf?pwbau9') format('truetype'),
-    url('../../vendor/tieto_styles/icon_set/Lovicons.woff?pwbau9') format('woff'),
-    url('../../vendor/tieto_styles/icon_set/Lovicons.svg?pwbau9#Lovicons') format('svg');
+  src:  url('./icon_set/Lovicons.woff');
   font-weight: normal;
   font-style: normal;
 }
