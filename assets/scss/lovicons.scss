@@ -1,8 +1,13 @@
 @font-face {
   font-family: 'Lovicons';
-  src:  url('./icon_set/Lovicons.woff');
-  font-weight: normal;
   font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Lovicons.eot'); /* IE9 Compat Modes */
+  src: local('Lovicons'), local('Lovicons'),
+       url('../fonts/Lovicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Lovicons.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Lovicons.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Lovicons.svg#Lovicons') format('svg'); /* Legacy iOS */
 }
 
 i {
