@@ -26,6 +26,7 @@
 							</optgroup>
 							<optgroup label="Typography &amp; Colors">
 									<option value="colors">Colors</option>
+									<option value="fonts">Fonts</option>
 							</optgroup>
 					</select>
 				</form>
@@ -34,13 +35,7 @@
 				<div id="category-icons" class="theme-content-category">
 						<div id="lovicons" class="i-library theme-content-element">
 	<h1 class="display-4 theme-content-element-title">Lovicons</h1>
-	<div class="theme-content-element-description"><p>Buttons can be used with <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> elements.</p>
-<p>Types of buttons:</p>
-<ul>
-<li>Default: Standard button</li>
-<li>Primary: Provides extra visual weight and identifies the primary action in a set of buttons</li>
-<li>Success: Indicates a successful or positive action</li>
-</ul>
+	<div class="theme-content-element-description"><p>Icons can be used with <code>&lt;i&gt;</code> element.</p>
 <div class="i-example">
                     <h5 class="i-example__heading">
                         <a
@@ -772,25 +767,322 @@
                 </div>
 
 
+
 <div class="i-code-block">
-	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> scss</button>
 	<div class="i-code-block__content hidden">
-		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;color-white&quot;&gt;&amp;nbsp;&lt;/div&gt;">Copy</button>
-		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;color-white&quot;&gt;&amp;nbsp;&lt;/div&gt;</code></pre>
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="
+// base Tieto colors
+////////////////////
+// Colors from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+// We use Tieto Style Guide -&gt; $tsg-..... namespace.
+////////////////////
+// If you need transparent colors use rgba colors: rgba($tsg-dove-grey, .3) or use sass opacify: opacify($tsg-dove-grey, .3), or any other sass color method!
+////////////////////
+
+$white: #fff;
+$black: #000;
+
+// Primary colour
+$tsg-picton-blue: #62B3E5;
+
+// Blue in user interfaces
+$tsg-curious-blue: #2C89C3;
+
+// Supporting colours
+$tsg-deep-blush: #E56385;
+$tsg-apple: #6CC04A;
+$tsg-cornflower: #F78D2D;
+
+// Secondary colours
+$tsg-cornfolwer-1: #9ACAEB;
+$tsg-bahama-blue: #0065A0;
+$tsg-azalea: #F0B3CA;
+$tsg-razzmatazz: #D51067;
+$tsg-yellow-green: #BDE093;
+$tsg-fun-green: #00833E;
+$tsg-macaroni-and-cheese: #FFBE85;
+$tsg-tenn: #D75F00;
+
+// Greyscale colours
+$tsg-alabaster: #F8F8F8;
+$tsg-iron: #EEEFF0;
+$tsg-mercury: #E5E3E3;
+$tsg-alto: #D2D2D2;
+$tsg-silver: #C1C1C1;
+$tsg-silver-chalice: #999;
+$tsg-boulder: #7B7B7B;
+$tsg-dove-grey: #5E5E5E;
+$tsg-mine-shaft: #333;">Copy</button>
+		<pre class="mb-0"><code class="lang-">
+// base Tieto colors
+////////////////////
+// Colors from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+// We use Tieto Style Guide -&gt; $tsg-..... namespace.
+////////////////////
+// If you need transparent colors use rgba colors: rgba($tsg-dove-grey, .3) or use sass opacify: opacify($tsg-dove-grey, .3), or any other sass color method!
+////////////////////
+
+$white: #fff;
+$black: #000;
+
+// Primary colour
+$tsg-picton-blue: #62B3E5;
+
+// Blue in user interfaces
+$tsg-curious-blue: #2C89C3;
+
+// Supporting colours
+$tsg-deep-blush: #E56385;
+$tsg-apple: #6CC04A;
+$tsg-cornflower: #F78D2D;
+
+// Secondary colours
+$tsg-cornfolwer-1: #9ACAEB;
+$tsg-bahama-blue: #0065A0;
+$tsg-azalea: #F0B3CA;
+$tsg-razzmatazz: #D51067;
+$tsg-yellow-green: #BDE093;
+$tsg-fun-green: #00833E;
+$tsg-macaroni-and-cheese: #FFBE85;
+$tsg-tenn: #D75F00;
+
+// Greyscale colours
+$tsg-alabaster: #F8F8F8;
+$tsg-iron: #EEEFF0;
+$tsg-mercury: #E5E3E3;
+$tsg-alto: #D2D2D2;
+$tsg-silver: #C1C1C1;
+$tsg-silver-chalice: #999;
+$tsg-boulder: #7B7B7B;
+$tsg-dove-grey: #5E5E5E;
+$tsg-mine-shaft: #333;</code></pre>
 	</div>
+</div></div>
 </div>
+
+						<div id="fonts" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Fonts</h1>
+	<div class="theme-content-element-description"><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="fonts-fonts.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="fonts-fonts.html"
+                            data-initinview="true"
+                            data-title="Loading…"
+
+                        ></div>
+                    </div>
+                </div>
+
+
+
 <div class="i-code-block">
-	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> scss</button>
 	<div class="i-code-block__content hidden">
-		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="div[class^=color-] {
-  height: 50px;
-  width: 100px;
-  border: 1px solid gray;
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="
+// base Tieto font styles
+/////////////////////////
+// Font styles from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+/////////////////////////
+
+@import url(&#39;//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700&#39;);
+
+$fw--100: 100; // thin/hairline
+$fw--200: 200; // extra-light/ultra-light
+$fw--300: 300; // light*
+$fw--400: 400; // normal/regular/book/roman*
+$fw--500: 500; // medium
+$fw--600: 600; // semi-bold/demi-bold
+$fw--700: 700; // bold*
+$fw--800: 800; // extra-bold/ultra-bold
+$fw--900: 900; // black/heavy
+
+$fs--normal: normal;
+$fs--italic: italic;
+
+$ff--arial: &#39;Arial&#39;, sans-serif;
+$ff--opensans: &quot;Open Sans&quot;, sans-serif;
+
+@mixin fontArialNormal() {  // Arial Normal
+  font-family: $ff--arial;
+  font-weight: $fw--400;
+  font-style: $fs--normal;
+}
+.arialNormal {
+  @include fontArialNormal();
+}
+
+@mixin fontArialItalic() {  // Arial Italic
+  font-family: $ff--arial;
+  font-weight: $fw--400;
+  font-style: $fs--italic;
+}
+.arialItalic {
+  @include fontArialItalic();
+}
+
+@mixin fontArialBold() {  // Arial Bold
+  font-family: $ff--arial;
+  font-weight: $fw--700;
+  font-style: $fs--normal;
+}
+.arialBold {
+  @include fontArialBold();
+}
+
+@mixin fontOpenSansLight() {  // Open Sans Light
+  font-family: $ff--opensans;
+  font-weight: $fw--300;
+  font-style: $fs--normal;
+}
+.openSansLight {
+  @include fontOpenSansLight();
+}
+
+@mixin fontOpenSansLightItalic() {  // Open Sans Light Italic
+  font-family: $ff--opensans;
+  font-weight: $fw--300;
+  font-style: $fs--italic;
+}
+.openSansLightItalic {
+  @include fontOpenSansLightItalic();
+}
+
+@mixin fontOpenSansNormal() {  // Open Sans Normal
+  font-family: $ff--opensans;
+  font-weight: $fw--400;
+  font-style: $fs--normal;
+}
+.openSansNormal {
+  @include fontOpenSansNormal();
+}
+
+@mixin fontOpenSansMiddle() {  // Open Sans Middle
+  font-family: $ff--opensans;
+  font-weight: $fw--600;
+  font-style: $fs--normal;
+}
+.openSansMiddle {
+  @include fontOpenSansMiddle();
+}
+
+@mixin fontOpenSansBold() {  // Open Sans Bold
+  font-family: $ff--opensans;
+  font-weight: $fw--700;
+  font-style: $fs--normal;
+}
+.openSansBold {
+  @include fontOpenSansBold();
 }">Copy</button>
-		<pre class="mb-0"><code class="lang-">div[class^=color-] {
-  height: 50px;
-  width: 100px;
-  border: 1px solid gray;
+		<pre class="mb-0"><code class="lang-">
+// base Tieto font styles
+/////////////////////////
+// Font styles from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+/////////////////////////
+
+@import url(&#39;//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700&#39;);
+
+$fw--100: 100; // thin/hairline
+$fw--200: 200; // extra-light/ultra-light
+$fw--300: 300; // light*
+$fw--400: 400; // normal/regular/book/roman*
+$fw--500: 500; // medium
+$fw--600: 600; // semi-bold/demi-bold
+$fw--700: 700; // bold*
+$fw--800: 800; // extra-bold/ultra-bold
+$fw--900: 900; // black/heavy
+
+$fs--normal: normal;
+$fs--italic: italic;
+
+$ff--arial: &#39;Arial&#39;, sans-serif;
+$ff--opensans: &quot;Open Sans&quot;, sans-serif;
+
+@mixin fontArialNormal() {  // Arial Normal
+  font-family: $ff--arial;
+  font-weight: $fw--400;
+  font-style: $fs--normal;
+}
+.arialNormal {
+  @include fontArialNormal();
+}
+
+@mixin fontArialItalic() {  // Arial Italic
+  font-family: $ff--arial;
+  font-weight: $fw--400;
+  font-style: $fs--italic;
+}
+.arialItalic {
+  @include fontArialItalic();
+}
+
+@mixin fontArialBold() {  // Arial Bold
+  font-family: $ff--arial;
+  font-weight: $fw--700;
+  font-style: $fs--normal;
+}
+.arialBold {
+  @include fontArialBold();
+}
+
+@mixin fontOpenSansLight() {  // Open Sans Light
+  font-family: $ff--opensans;
+  font-weight: $fw--300;
+  font-style: $fs--normal;
+}
+.openSansLight {
+  @include fontOpenSansLight();
+}
+
+@mixin fontOpenSansLightItalic() {  // Open Sans Light Italic
+  font-family: $ff--opensans;
+  font-weight: $fw--300;
+  font-style: $fs--italic;
+}
+.openSansLightItalic {
+  @include fontOpenSansLightItalic();
+}
+
+@mixin fontOpenSansNormal() {  // Open Sans Normal
+  font-family: $ff--opensans;
+  font-weight: $fw--400;
+  font-style: $fs--normal;
+}
+.openSansNormal {
+  @include fontOpenSansNormal();
+}
+
+@mixin fontOpenSansMiddle() {  // Open Sans Middle
+  font-family: $ff--opensans;
+  font-weight: $fw--600;
+  font-style: $fs--normal;
+}
+.openSansMiddle {
+  @include fontOpenSansMiddle();
+}
+
+@mixin fontOpenSansBold() {  // Open Sans Bold
+  font-family: $ff--opensans;
+  font-weight: $fw--700;
+  font-style: $fs--normal;
+}
+.openSansBold {
+  @include fontOpenSansBold();
 }</code></pre>
 	</div>
 </div></div>
@@ -843,7 +1135,7 @@
 			
 						<h5
 							class="pt-4 mb-1 theme-sidebar-category-title"
-							data-filter-value=" Colors "
+							data-filter-value=" Colors  Fonts "
 						>
 							<a href="#category-typography &amp; colors" class="i-sidebar-list-item">
 								<b>Typography &amp; Colors</b>
@@ -857,6 +1149,13 @@
 									data-filter-value="Colors"
 								>
 									<span>Colors</span>
+								</a>
+								<a
+									href="#fonts"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Fonts"
+								>
+									<span>Fonts</span>
 								</a>
 						</div>
 			

@@ -1,0 +1,677 @@
+<!doctype html>
+<html>
+
+	<head>
+		
+
+		<style>
+					.color-white {
+  background-color: #fff;
+}
+
+.color-black {
+  background-color: #000;
+}
+
+.color-picton-blue {
+  background-color: #62B3E5;
+}
+
+.color-curious-blue {
+  background-color: #2C89C3;
+}
+
+.color-deep-blush {
+  background-color: #E56385;
+}
+
+.color-apple {
+  background-color: #6CC04A;
+}
+
+.color-cornflower {
+  background-color: #F78D2D;
+}
+
+.color-cornfolwer-1 {
+  background-color: #9ACAEB;
+}
+
+.color-bahama-blue {
+  background-color: #0065A0;
+}
+
+.color-azalea {
+  background-color: #F0B3CA;
+}
+
+.color-razzmatazz {
+  background-color: #D51067;
+}
+
+.color-yellow-green {
+  background-color: #BDE093;
+}
+
+.color-fun-green {
+  background-color: #00833E;
+}
+
+.color-macaroni-and-cheese {
+  background-color: #FFBE85;
+}
+
+.color-tenn {
+  background-color: #D75F00;
+}
+
+.color-alabaster {
+  background-color: #F8F8F8;
+}
+
+.color-iron {
+  background-color: #EEEFF0;
+}
+
+.color-mercury {
+  background-color: #E5E3E3;
+}
+
+.color-alto {
+  background-color: #D2D2D2;
+}
+
+.color-silver {
+  background-color: #C1C1C1;
+}
+
+.color-silver-chalice {
+  background-color: #999;
+}
+
+.color-boulder {
+  background-color: #7B7B7B;
+}
+
+.color-dove-grey {
+  background-color: #5E5E5E;
+}
+
+.color-mine-shaft {
+  background-color: #333;
+}
+					.swatch, swatch * {
+  box-sizing: border-box;
+}
+.swatch {
+  display: inline-block;
+  width: 100px;
+  border: 1px solid #DCDCDC;
+  margin-bottom: 10px;
+}
+div[class^=color-] {
+  height: 50px;
+}
+.hex {
+  font: 10px Arial, Helvetica, sans-serif;
+  padding: 3px;
+  text-align: center;
+  background-color: #F7F7F7;
+  text-transform: uppercase;
+}
+		</style>
+
+		<style>
+			html, body {
+				min-height: 0 !important;
+				height: auto !important;
+			}
+		</style>
+
+		<script>
+			function findAndHandleStylemarkBlocks(languages, handler) {
+				var blocks = getStylemarkBlocks(languages);
+				handleStylemarkBlocks(blocks, handler);
+			}
+
+			function getStylemarkBlocks(languages) {
+				languages = typeof languages === 'string' ? [languages] : languages;
+
+				var selectors = [];
+
+				for (var i = 0; i < languages.length; i++) {
+					selectors.push('script[data-language="' + languages[i] + '"]');
+				}
+
+				var selector = selectors.join(',');
+				var scripts = document.querySelectorAll(selector);
+				var blocks = [];
+
+				for (var i = 0, length = scripts.length; i < length; i++) {
+					if (scripts[i].innerText) {
+						blocks.push(scripts[i].innerText);
+					}
+				}
+
+				return blocks;
+			}
+
+			function handleStylemarkBlocks(blocks, handler) {
+				for (var i = 0, length = blocks.length; i < length; i++) {
+					handler(blocks[i], i);
+				}
+			}
+		</script>
+
+	</head>
+
+	<body>					<div class="swatch">
+  <div class="color-white">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-black">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-picton-blue">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-curious-blue">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-deep-blush">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-apple">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-cornflower">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-cornfolwer-1">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-bahama-blue">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-azalea">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-razzmatazz">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-yellow-green">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-fun-green">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-macaroni-and-cheese">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-tenn">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-alabaster">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-iron">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-mercury">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-alto">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-silver">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-silver-chalice">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-boulder">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-dove-grey">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-mine-shaft">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+
+			<script type="text/x-stylemark" data-language="html"><div class="swatch">
+  <div class="color-white">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-black">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-picton-blue">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-curious-blue">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-deep-blush">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-apple">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-cornflower">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-cornfolwer-1">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-bahama-blue">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-azalea">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-razzmatazz">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-yellow-green">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-fun-green">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-macaroni-and-cheese">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-tenn">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-alabaster">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-iron">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-mercury">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-alto">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-silver">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-silver-chalice">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-boulder">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-dove-grey">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+<div class="swatch">
+  <div class="color-mine-shaft">&nbsp;</div>
+  <div class="hex">#HEX</div>
+</div>
+</script>
+			<script type="text/x-stylemark" data-language="scss">
+// base Tieto colors
+////////////////////
+// Colors from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+// We use Tieto Style Guide -> $tsg-..... namespace.
+////////////////////
+// If you need transparent colors use rgba colors: rgba($tsg-dove-grey, .3) or use sass opacify: opacify($tsg-dove-grey, .3), or any other sass color method!
+////////////////////
+
+$white: #fff;
+$black: #000;
+
+// Primary colour
+$tsg-picton-blue: #62B3E5;
+
+// Blue in user interfaces
+$tsg-curious-blue: #2C89C3;
+
+// Supporting colours
+$tsg-deep-blush: #E56385;
+$tsg-apple: #6CC04A;
+$tsg-cornflower: #F78D2D;
+
+// Secondary colours
+$tsg-cornfolwer-1: #9ACAEB;
+$tsg-bahama-blue: #0065A0;
+$tsg-azalea: #F0B3CA;
+$tsg-razzmatazz: #D51067;
+$tsg-yellow-green: #BDE093;
+$tsg-fun-green: #00833E;
+$tsg-macaroni-and-cheese: #FFBE85;
+$tsg-tenn: #D75F00;
+
+// Greyscale colours
+$tsg-alabaster: #F8F8F8;
+$tsg-iron: #EEEFF0;
+$tsg-mercury: #E5E3E3;
+$tsg-alto: #D2D2D2;
+$tsg-silver: #C1C1C1;
+$tsg-silver-chalice: #999;
+$tsg-boulder: #7B7B7B;
+$tsg-dove-grey: #5E5E5E;
+$tsg-mine-shaft: #333;
+
+</script>
+			<script type="text/x-stylemark" data-language="css">.color-white {
+  background-color: #fff;
+}
+
+.color-black {
+  background-color: #000;
+}
+
+.color-picton-blue {
+  background-color: #62B3E5;
+}
+
+.color-curious-blue {
+  background-color: #2C89C3;
+}
+
+.color-deep-blush {
+  background-color: #E56385;
+}
+
+.color-apple {
+  background-color: #6CC04A;
+}
+
+.color-cornflower {
+  background-color: #F78D2D;
+}
+
+.color-cornfolwer-1 {
+  background-color: #9ACAEB;
+}
+
+.color-bahama-blue {
+  background-color: #0065A0;
+}
+
+.color-azalea {
+  background-color: #F0B3CA;
+}
+
+.color-razzmatazz {
+  background-color: #D51067;
+}
+
+.color-yellow-green {
+  background-color: #BDE093;
+}
+
+.color-fun-green {
+  background-color: #00833E;
+}
+
+.color-macaroni-and-cheese {
+  background-color: #FFBE85;
+}
+
+.color-tenn {
+  background-color: #D75F00;
+}
+
+.color-alabaster {
+  background-color: #F8F8F8;
+}
+
+.color-iron {
+  background-color: #EEEFF0;
+}
+
+.color-mercury {
+  background-color: #E5E3E3;
+}
+
+.color-alto {
+  background-color: #D2D2D2;
+}
+
+.color-silver {
+  background-color: #C1C1C1;
+}
+
+.color-silver-chalice {
+  background-color: #999;
+}
+
+.color-boulder {
+  background-color: #7B7B7B;
+}
+
+.color-dove-grey {
+  background-color: #5E5E5E;
+}
+
+.color-mine-shaft {
+  background-color: #333;
+}</script>
+			<script type="text/x-stylemark" data-language="css">.swatch, swatch * {
+  box-sizing: border-box;
+}
+.swatch {
+  display: inline-block;
+  width: 100px;
+  border: 1px solid #DCDCDC;
+  margin-bottom: 10px;
+}
+div[class^=color-] {
+  height: 50px;
+}
+.hex {
+  font: 10px Arial, Helvetica, sans-serif;
+  padding: 3px;
+  text-align: center;
+  background-color: #F7F7F7;
+  text-transform: uppercase;
+}</script>
+			<script type="text/x-stylemark" data-language="js">var sample = document.querySelectorAll('div[class^=color-]');
+
+function rgb2hex(rgb) {
+  if (/^#[0-9A-F]{6}$/i.test(rgb)) return rgb;
+
+  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  function hex(x) {
+      return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
+
+for (var i = 0; i < sample.length; i++) {
+  console.log(sample[i])
+  sample[i].nextElementSibling.textContent = rgb2hex(window.getComputedStyle(sample[i], null).getPropertyValue('background-color'));
+}
+</script>
+
+		<!--
+			Vanilla JS
+		-->
+
+		<script>
+			findAndHandleStylemarkBlocks('js', function(block) {
+				eval(block);
+			});
+		</script>
+
+		<!--
+			AngularJS
+		-->
+
+		<script>
+			(function(angular) {
+
+				if (!angular) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('angularjs', function(block, index) {
+					var moduleElem = document.querySelector('[ng-app]');
+					var module;
+
+					if (moduleElem) {
+						// Uses an existing module
+						module = angular.module(moduleElem.getAttribute('ng-app'));
+					}
+					else {
+						// Creates a new module
+						module = angular.module('stylemark-colors-colors', []);
+					}
+
+					module.controller('stylemark-colors-colors-' + index, function($scope) {
+						$scope.$eval(block);
+					});
+				});
+			})(window.angular);
+		</script>
+
+		<!--
+			React / JSX
+		-->
+
+		<script>
+			(function(ReactDOM) {
+
+				if (!ReactDOM) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('jsx', function(block, index) {
+					var rootNode = document.querySelectorAll('.stylemark-react-root')[index];
+					var Component = eval(block);
+					ReactDOM.render(Component, rootNode);
+				});
+			})(window.ReactDOM);
+		</script>
+
+		<!--
+			Ember
+		-->
+
+		<script>
+			(function(Ember) {
+
+				if (!Ember) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks(['handlebars', 'hbs'], function(block, index) {
+					var render = function() {
+						var app = window.noop
+						var container = app.__container__;
+						var renderer = container.lookup('renderer:-dom');
+						var template = Ember.HTMLBars.compile(block);
+
+						var jsBlocks = getStylemarkBlocks('js');
+						var jsBlock = jsBlocks && jsBlocks[0] ? jsBlocks[0] : '{}';
+						var context;
+						eval('context = ' + jsBlock);
+
+						// Credit:
+						// http://stackoverflow.com/questions/27950413/render-ember-js-hbs-template-to-a-string#answer-35625858
+						var compile = function(container, template, context) {
+							return new Ember.RSVP.Promise(function(resolve) {
+								Ember.Component.extend(Ember.merge({
+									style: 'display:none;',
+									layout: template,
+									container: container,
+									renderer: renderer,
+
+									init: function() {
+										this._super.apply(this, arguments);
+										Ember.setOwner(this, container);
+									},
+
+									didRender: function() {
+										var elem = this.$();
+										resolve(elem);
+										this.destroy();
+									}
+								}, context))
+									.create()
+									.append();
+
+							});
+						};
+
+						compile(container, template, context).then(function(elem) {
+							var node = document.querySelectorAll('.stylemark-ember-root')[index];
+							jQuery(node).append(elem);
+						});
+					};
+
+					var isReady = function() {
+						return window.noop
+							&& window.noop.__container__;
+					};
+
+					var checkReady = function() {
+						if (isReady()) {
+							render();
+						}
+						else {
+							setTimeout(checkReady, 20);
+						}
+					};
+
+					checkReady();
+				});
+
+			})(window.Ember);
+		</script>
+
+		<script src="_stylemark/js/vendor/iframeResizer.contentWindow.min.js"></script>
+	</body>
+</html>

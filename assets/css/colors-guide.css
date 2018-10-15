@@ -1,3 +1,95 @@
 .color-white {
-  color: #fff;
+  background-color: #fff;
+}
+
+.color-black {
+  background-color: #000;
+}
+
+.color-picton-blue {
+  background-color: #62B3E5;
+}
+
+.color-curious-blue {
+  background-color: #2C89C3;
+}
+
+.color-deep-blush {
+  background-color: #E56385;
+}
+
+.color-apple {
+  background-color: #6CC04A;
+}
+
+.color-cornflower {
+  background-color: #F78D2D;
+}
+
+.color-cornfolwer-1 {
+  background-color: #9ACAEB;
+}
+
+.color-bahama-blue {
+  background-color: #0065A0;
+}
+
+.color-azalea {
+  background-color: #F0B3CA;
+}
+
+.color-razzmatazz {
+  background-color: #D51067;
+}
+
+.color-yellow-green {
+  background-color: #BDE093;
+}
+
+.color-fun-green {
+  background-color: #00833E;
+}
+
+.color-macaroni-and-cheese {
+  background-color: #FFBE85;
+}
+
+.color-tenn {
+  background-color: #D75F00;
+}
+
+.color-alabaster {
+  background-color: #F8F8F8;
+}
+
+.color-iron {
+  background-color: #EEEFF0;
+}
+
+.color-mercury {
+  background-color: #E5E3E3;
+}
+
+.color-alto {
+  background-color: #D2D2D2;
+}
+
+.color-silver {
+  background-color: #C1C1C1;
+}
+
+.color-silver-chalice {
+  background-color: #999;
+}
+
+.color-boulder {
+  background-color: #7B7B7B;
+}
+
+.color-dove-grey {
+  background-color: #5E5E5E;
+}
+
+.color-mine-shaft {
+  background-color: #333;
 }

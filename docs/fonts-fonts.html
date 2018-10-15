@@ -1,0 +1,464 @@
+<!doctype html>
+<html>
+
+	<head>
+		
+
+		<style>
+					@import url("//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700");
+
+.arialNormal {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arialItalic {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arialBold {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.openSansLight {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.openSansLightItalic {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.openSansNormal {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.openSansMiddle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.openSansBold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+					.font {
+  margin-bottom: 40px;
+}
+.font > .title {
+  font-family: sans-serif;
+}
+		</style>
+
+		<style>
+			html, body {
+				min-height: 0 !important;
+				height: auto !important;
+			}
+		</style>
+
+		<script>
+			function findAndHandleStylemarkBlocks(languages, handler) {
+				var blocks = getStylemarkBlocks(languages);
+				handleStylemarkBlocks(blocks, handler);
+			}
+
+			function getStylemarkBlocks(languages) {
+				languages = typeof languages === 'string' ? [languages] : languages;
+
+				var selectors = [];
+
+				for (var i = 0; i < languages.length; i++) {
+					selectors.push('script[data-language="' + languages[i] + '"]');
+				}
+
+				var selector = selectors.join(',');
+				var scripts = document.querySelectorAll(selector);
+				var blocks = [];
+
+				for (var i = 0, length = scripts.length; i < length; i++) {
+					if (scripts[i].innerText) {
+						blocks.push(scripts[i].innerText);
+					}
+				}
+
+				return blocks;
+			}
+
+			function handleStylemarkBlocks(blocks, handler) {
+				for (var i = 0, length = blocks.length; i < length; i++) {
+					handler(blocks[i], i);
+				}
+			}
+		</script>
+
+	</head>
+
+	<body>					<div class="font">
+  <h4 class="title">Arial normal</h4>
+  <p class="arialNormal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Arial italic</h4>
+  <p class="arialItalic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Arial bold</h4>
+  <p class="arialBold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans light</h4>
+  <p class="openSansLight">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans light italic</h4>
+  <p class="openSansLightItalic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans normal</h4>
+  <p class="openSansNormal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans middle</h4>
+  <p class="openSansMiddle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">OpenSans bold</h4>
+  <p class="openSansBold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+			<script type="text/x-stylemark" data-language="html"><div class="font">
+  <h4 class="title">Arial normal</h4>
+  <p class="arialNormal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Arial italic</h4>
+  <p class="arialItalic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Arial bold</h4>
+  <p class="arialBold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans light</h4>
+  <p class="openSansLight">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans light italic</h4>
+  <p class="openSansLightItalic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans normal</h4>
+  <p class="openSansNormal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">Open Sans middle</h4>
+  <p class="openSansMiddle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div>
+<div class="font">
+  <h4 class="title">OpenSans bold</h4>
+  <p class="openSansBold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor obcaecati porro nobis itaque quis molestias numquam minima voluptatem voluptates dignissimos est, ea error deserunt, officia saepe aperiam similique hic velit sapiente cupiditate! Ut nesciunt error officiis id earum qui porro!</p>
+</div></script>
+			<script type="text/x-stylemark" data-language="scss">
+// base Tieto font styles
+/////////////////////////
+// Font styles from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+/////////////////////////
+
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700');
+
+$fw--100: 100; // thin/hairline
+$fw--200: 200; // extra-light/ultra-light
+$fw--300: 300; // light*
+$fw--400: 400; // normal/regular/book/roman*
+$fw--500: 500; // medium
+$fw--600: 600; // semi-bold/demi-bold
+$fw--700: 700; // bold*
+$fw--800: 800; // extra-bold/ultra-bold
+$fw--900: 900; // black/heavy
+
+$fs--normal: normal;
+$fs--italic: italic;
+
+$ff--arial: 'Arial', sans-serif;
+$ff--opensans: "Open Sans", sans-serif;
+
+@mixin fontArialNormal() {  // Arial Normal
+  font-family: $ff--arial;
+  font-weight: $fw--400;
+  font-style: $fs--normal;
+}
+.arialNormal {
+  @include fontArialNormal();
+}
+
+@mixin fontArialItalic() {  // Arial Italic
+  font-family: $ff--arial;
+  font-weight: $fw--400;
+  font-style: $fs--italic;
+}
+.arialItalic {
+  @include fontArialItalic();
+}
+
+@mixin fontArialBold() {  // Arial Bold
+  font-family: $ff--arial;
+  font-weight: $fw--700;
+  font-style: $fs--normal;
+}
+.arialBold {
+  @include fontArialBold();
+}
+
+@mixin fontOpenSansLight() {  // Open Sans Light
+  font-family: $ff--opensans;
+  font-weight: $fw--300;
+  font-style: $fs--normal;
+}
+.openSansLight {
+  @include fontOpenSansLight();
+}
+
+@mixin fontOpenSansLightItalic() {  // Open Sans Light Italic
+  font-family: $ff--opensans;
+  font-weight: $fw--300;
+  font-style: $fs--italic;
+}
+.openSansLightItalic {
+  @include fontOpenSansLightItalic();
+}
+
+@mixin fontOpenSansNormal() {  // Open Sans Normal
+  font-family: $ff--opensans;
+  font-weight: $fw--400;
+  font-style: $fs--normal;
+}
+.openSansNormal {
+  @include fontOpenSansNormal();
+}
+
+@mixin fontOpenSansMiddle() {  // Open Sans Middle
+  font-family: $ff--opensans;
+  font-weight: $fw--600;
+  font-style: $fs--normal;
+}
+.openSansMiddle {
+  @include fontOpenSansMiddle();
+}
+
+@mixin fontOpenSansBold() {  // Open Sans Bold
+  font-family: $ff--opensans;
+  font-weight: $fw--700;
+  font-style: $fs--normal;
+}
+.openSansBold {
+  @include fontOpenSansBold();
+}
+
+</script>
+			<script type="text/x-stylemark" data-language="css">@import url("//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700");
+
+.arialNormal {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arialItalic {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arialBold {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.openSansLight {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.openSansLightItalic {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.openSansNormal {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.openSansMiddle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.openSansBold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}</script>
+			<script type="text/x-stylemark" data-language="css">.font {
+  margin-bottom: 40px;
+}
+.font > .title {
+  font-family: sans-serif;
+}</script>
+
+		<!--
+			Vanilla JS
+		-->
+
+		<script>
+			findAndHandleStylemarkBlocks('js', function(block) {
+				eval(block);
+			});
+		</script>
+
+		<!--
+			AngularJS
+		-->
+
+		<script>
+			(function(angular) {
+
+				if (!angular) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('angularjs', function(block, index) {
+					var moduleElem = document.querySelector('[ng-app]');
+					var module;
+
+					if (moduleElem) {
+						// Uses an existing module
+						module = angular.module(moduleElem.getAttribute('ng-app'));
+					}
+					else {
+						// Creates a new module
+						module = angular.module('stylemark-fonts-fonts', []);
+					}
+
+					module.controller('stylemark-fonts-fonts-' + index, function($scope) {
+						$scope.$eval(block);
+					});
+				});
+			})(window.angular);
+		</script>
+
+		<!--
+			React / JSX
+		-->
+
+		<script>
+			(function(ReactDOM) {
+
+				if (!ReactDOM) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('jsx', function(block, index) {
+					var rootNode = document.querySelectorAll('.stylemark-react-root')[index];
+					var Component = eval(block);
+					ReactDOM.render(Component, rootNode);
+				});
+			})(window.ReactDOM);
+		</script>
+
+		<!--
+			Ember
+		-->
+
+		<script>
+			(function(Ember) {
+
+				if (!Ember) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks(['handlebars', 'hbs'], function(block, index) {
+					var render = function() {
+						var app = window.noop
+						var container = app.__container__;
+						var renderer = container.lookup('renderer:-dom');
+						var template = Ember.HTMLBars.compile(block);
+
+						var jsBlocks = getStylemarkBlocks('js');
+						var jsBlock = jsBlocks && jsBlocks[0] ? jsBlocks[0] : '{}';
+						var context;
+						eval('context = ' + jsBlock);
+
+						// Credit:
+						// http://stackoverflow.com/questions/27950413/render-ember-js-hbs-template-to-a-string#answer-35625858
+						var compile = function(container, template, context) {
+							return new Ember.RSVP.Promise(function(resolve) {
+								Ember.Component.extend(Ember.merge({
+									style: 'display:none;',
+									layout: template,
+									container: container,
+									renderer: renderer,
+
+									init: function() {
+										this._super.apply(this, arguments);
+										Ember.setOwner(this, container);
+									},
+
+									didRender: function() {
+										var elem = this.$();
+										resolve(elem);
+										this.destroy();
+									}
+								}, context))
+									.create()
+									.append();
+
+							});
+						};
+
+						compile(container, template, context).then(function(elem) {
+							var node = document.querySelectorAll('.stylemark-ember-root')[index];
+							jQuery(node).append(elem);
+						});
+					};
+
+					var isReady = function() {
+						return window.noop
+							&& window.noop.__container__;
+					};
+
+					var checkReady = function() {
+						if (isReady()) {
+							render();
+						}
+						else {
+							setTimeout(checkReady, 20);
+						}
+					};
+
+					checkReady();
+				});
+
+			})(window.Ember);
+		</script>
+
+		<script src="_stylemark/js/vendor/iframeResizer.contentWindow.min.js"></script>
+	</body>
+</html>
