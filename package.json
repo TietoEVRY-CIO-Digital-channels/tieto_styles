@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "guide": "stylemark -i assets/guide -o guide -c stylemark.yml -w 1000 -b 2345"
+    "guide": "stylemark -i assets/markdown -o docs -c stylemark.yml"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-modify-css-urls": "^2.0.0",
     "gulp-sass": "^4.0.1",
