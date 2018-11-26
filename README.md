@@ -2,6 +2,8 @@
 Generic Tieto style components.
 
 # Installation
+
+## Composer
 - Add this as a repository in your composer.json file
 ```
 {
@@ -19,3 +21,13 @@ Generic Tieto style components.
 composer require --dev brainsum/tieto_styles:^1.0
 ```
 
+## NPM
+- Type:
+```
+npm i brainsum/tieto_styles
+```
+
+- Or add to package.json:
+```
+"tieto_styles": "github:brainsum/tieto_styles"
+```
