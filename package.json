@@ -1,0 +1,15 @@
+{
+  "name": "tieto_styles",
+  "version": "1.0.0",
+  "description": "Generic Tieto style components.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainsum/tieto_styles.git"
+  },
+  "author": "Brainsum",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/brainsum/tieto_styles/issues"
+  },
+  "homepage": "https://github.com/brainsum/tieto_styles"
+}
