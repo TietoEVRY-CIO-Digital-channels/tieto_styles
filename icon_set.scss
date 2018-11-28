@@ -1,8 +1,14 @@
+$lov-font-path: "./icon_set" !default;
+
 @font-face {
   font-family: 'Lovicons';
-  src:  url('./icon_set/Lovicons.woff');
   font-weight: normal;
   font-style: normal;
+  src: url('#{$lov-font-path}/Lovicons.eot');
+  src: url('#{$lov-font-path}/Lovicons.eot?#iefix') format('embedded-opentype'),
+  url('#{$lov-font-path}/Lovicons.woff') format('woff'),
+  url('#{$lov-font-path}/Lovicons.ttf') format('truetype'),
+  url('#{$lov-font-path}/Lovicons.svg#fontawesome') format('svg');
 }
 
 i {
