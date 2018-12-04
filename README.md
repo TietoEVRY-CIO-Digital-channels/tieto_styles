@@ -24,12 +24,12 @@ composer require --dev brainsum/tieto_styles:^1.0
 ### NPM
 In terminal type:
 ```
-npm i lkduerig/tieto_styles#2.x
+npm i brainsum/tieto_styles#2.x
 ```
 
 Or add to package.json file:
 ```
-"tieto_styles": "github:lkduerig/tieto_styles#2.x"
+"tieto_styles": "github:brainsum/tieto_styles#2.x"
 ```
 
 ## Usage
