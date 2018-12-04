@@ -1,0 +1,8 @@
+.color {
+  padding: 25px; }
+  .color.white {
+    background-color: #fff; }
+  .color.black {
+    background-color: #000; }
+  .color.tsg-picton-blue {
+    background-color: #3d9617; }

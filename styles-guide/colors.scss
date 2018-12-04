@@ -1,0 +1,33 @@
+@import '../styles-library/colors.scss';
+
+// Colors
+//
+// This is the atoms chapter.
+//
+// Styleguide 1.0
+
+// Swatches
+//
+// An info cards with the colors and description.
+//
+// .white - White
+// .black - Black
+// .tsg-picton-blue - Picton blue
+//
+// markup:
+// <div class="color {$modifiers}"></div>
+//
+// Styleguide 1.1
+
+.color {
+    padding:25px;
+    &.white {
+        background-color: $white;
+    }
+    &.black {
+        background-color: $black;
+    }
+    &.tsg-picton-blue {
+        background-color: $tsg-picton-blue;
+    }
+}

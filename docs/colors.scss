@@ -1,0 +1,40 @@
+@import '../styles-library/colors.scss';
+
+// Colors
+//
+// This is the atoms chapter. Atoms are the only parts that contain actual
+// class and style definitions. The higher level abastractions are mere
+// composites of the existing atoms.
+//
+// Styleguide 1.0
+
+// Swatches
+//
+// An info card with the name and description of a person.
+//
+// We add eg- (exempli gratia) in front of all our styles to put them in their
+// own "namespace".  Your prefix would ideally be unique to the project you are
+// working on.  This atom defines the "person info" block. Its main class is
+// therefore called eg-person-info
+//
+// .white - White
+// .black - Black
+// .tsg-picton-blue - Picton blue
+//
+// markup:
+// <div class="color {$modifiers}"></div>
+//
+// Styleguide 1.1
+
+.color {
+    padding:25px;
+    &.white {
+        background-color: $white;
+    }
+    &.black {
+        background-color: $black;
+    }
+    &.tsg-picton-blue {
+        background-color: $tsg-picton-blue;
+    }
+}

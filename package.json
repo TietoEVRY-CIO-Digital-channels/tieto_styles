@@ -1,15 +1,20 @@
 {
   "name": "tieto_styles",
-  "version": "1.0.0",
-  "description": "Generic Tieto style components.",
+  "version": "2.0.0",
+  "description": "Generic Tieto style components and style guide",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brainsum/tieto_styles.git"
   },
-  "author": "Brainsum",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/brainsum/tieto_styles/issues"
+  "scripts": {
+    "start": "gulp styleguide:dev",
+    "build": "gulp styleguide:build"
   },
-  "homepage": "https://github.com/brainsum/tieto_styles"
+  "author": "Brainsum",
+  "homepage": "https://github.com/brainsum/tieto_styles",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "sc5-styleguide": "^2.2.0"
+  }
 }

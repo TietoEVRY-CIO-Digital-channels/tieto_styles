@@ -1,4 +1,8 @@
-$lov-font-path: "./icon_set" !default;
+// Tieto icons
+//
+// Font styles from this style guide: https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+
+$lov-font-path: "../icons" !default;
 
 @font-face {
   font-family: 'Lovicons';
@@ -10,6 +14,11 @@ $lov-font-path: "./icon_set" !default;
   url('#{$lov-font-path}/Lovicons.ttf') format('truetype'),
   url('#{$lov-font-path}/Lovicons.svg#fontawesome') format('svg');
 }
+
+// Tieto icon fonts
+//
+// Markup:
+// <i>asd</i>
 
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
