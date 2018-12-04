@@ -2,20 +2,13 @@
 
 // Colors
 //
-// This is the atoms chapter. Atoms are the only parts that contain actual
-// class and style definitions. The higher level abastractions are mere
-// composites of the existing atoms.
+// This is the atoms chapter.
 //
 // Styleguide 1.0
 
 // Swatches
 //
-// An info card with the name and description of a person.
-//
-// We add eg- (exempli gratia) in front of all our styles to put them in their
-// own "namespace".  Your prefix would ideally be unique to the project you are
-// working on.  This atom defines the "person info" block. Its main class is
-// therefore called eg-person-info
+// An info cards with the colors and description.
 //
 // .white - White
 // .black - Black
