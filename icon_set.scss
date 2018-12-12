@@ -11,7 +11,7 @@ $lov-font-path: "./icon_set" !default;
   url('#{$lov-font-path}/Lovicons.svg#fontawesome') format('svg');
 }
 
-i {
+i[class^=icon-] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Lovicons' !important;
   speak: none;
