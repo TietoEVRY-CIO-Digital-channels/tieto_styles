@@ -1,0 +1,10 @@
+@mixin iterate-map($map) {
+  @each $key, $value in $map {
+    &.#{$key} {
+      //@content;
+
+      // @todo Go figure. Do something with this. What parameters to make this useful and versatile?
+      background-color: $value;
+    }
+  }
+}

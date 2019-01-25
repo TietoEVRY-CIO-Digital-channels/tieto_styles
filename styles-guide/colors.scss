@@ -1,4 +1,6 @@
-@import '../styles-library/colors.scss';
+@import '../styles-library/shame';
+@import '../styles-library/base/colors';
+@import '../styles-library/base/mixins';
 
 // Colors
 //
@@ -6,28 +8,69 @@
 //
 // Styleguide 1.0
 
-// Swatches
+// Colors
 //
 // An info cards with the colors and description.
 //
-// .white - White
-// .black - Black
-// .tsg-picton-blue - Picton blue
+// .white - #fff
+// .black - #000
+//// Primary colour
+// .picton-blue - #8ae463
+//// Blue in user interfaces
+// .curious-blue - #2C89C3
+//// Supporting colours
+// .deep-blush - #E56385
+// .apple - #6CC04A
+// .cornflower - #F78D2D
+//// Secondary colours
+// .cornflower-1 - #9ACAEB
+// .bahama-blue - #0065A0
+// .azalea - #F0B3CA
+// .razzmatazz - #D51067
+// .yellow-green - #BDE093
+// .fun-green - #00833E
+// .macaroni-and-cheese - #FFBE85
+// .tenn - #D75F00
 //
 // markup:
 // <div class="color {$modifiers}"></div>
 //
 // Styleguide 1.1
 
+// Grayscale
+//
+// An info cards with the colors and description.
+//
+// .white - #fff
+// .black - #000
+//// Greyscale colours
+// .alabaster - #F8F8F8
+// .iron - #EEEFF0
+// .mercury - #E5E3E3
+// .alto - #D2D2D2
+// .silver - #C1C1C1
+// .silver-chalice - #999
+// .boulder - #7B7B7B
+// .dove-grey - #5E5E5E
+// .mine-shaft - #333
+//
+// markup:
+// <div class="color {$modifiers}"></div>
+//
+// Styleguide 1.2
+
 .color {
-    padding:25px;
-    &.white {
-        background-color: $white;
+  padding: 5 * $base-unit;
+
+  @each $name, $color in $tsg-colors {
+    &.#{$name} {
+      background-color: $color;
     }
-    &.black {
-        background-color: $black;
+  }
+
+  @each $name, $color in $tsg-grayscale {
+    &.#{$name} {
+      background-color: $color;
     }
-    &.tsg-picton-blue {
-        background-color: $tsg-picton-blue;
-    }
+  }
 }

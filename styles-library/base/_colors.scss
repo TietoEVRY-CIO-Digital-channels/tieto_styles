@@ -1,0 +1,78 @@
+// Colors
+//
+// This section contains various Tieto colors.
+
+// @todo Make mixin or something how to get these variables from the $tsg-colors variable map. Don't use these colors directly yet, not sure how they should be used.
+
+$white: #fff;
+$black: #000;
+
+// Primary colour
+$tsg-picton-blue: #8ae463;
+
+// Blue in user interfaces
+$tsg-curious-blue: #2C89C3;
+
+// Supporting colours
+$tsg-deep-blush: #E56385;
+$tsg-apple: #6CC04A;
+$tsg-cornflower: #F78D2D;
+
+// Secondary colours
+$tsg-cornflower-1: #9ACAEB;
+$tsg-bahama-blue: #0065A0;
+$tsg-azalea: #F0B3CA;
+$tsg-razzmatazz: #D51067;
+$tsg-yellow-green: #BDE093;
+$tsg-fun-green: #00833E;
+$tsg-macaroni-and-cheese: #FFBE85;
+$tsg-tenn: #D75F00;
+
+// Greyscale colours
+$tsg-alabaster: #F8F8F8;
+$tsg-iron: #EEEFF0;
+$tsg-mercury: #E5E3E3;
+$tsg-alto: #D2D2D2;
+$tsg-silver: #C1C1C1;
+$tsg-silver-chalice: #999;
+$tsg-boulder: #7B7B7B;
+$tsg-dove-grey: #5E5E5E;
+$tsg-mine-shaft: #333;
+// end todo.
+
+
+// Variable maps of Tieto colors.
+$tsg-colors: (
+  // Primary colour
+    'picton-blue': #62B3E5,
+  // Blue in user interfaces
+    'curious-blue': #2C89C3,
+  // Supporting colours
+    'deep-blush': #E56385,
+    'apple': #6CC04A,
+    'cornflower': #F78D2D,
+  // Secondary colours
+    'cornflower-1': #9ACAEB,
+    'bahama-blue': #0065A0,
+    'azalea': #F0B3CA,
+    'razzmatazz': #D51067,
+    'yellow-green': #BDE093,
+    'fun-green': #00833E,
+    'macaroni-and-cheese': #FFBE85,
+    'tenn': #D75F00,
+);
+
+// Greyscale colours
+$tsg-grayscale: (
+    'white': #fff,
+    'alabaster': #F8F8F8,
+    'iron': #EEEFF0,
+    'mercury': #E5E3E3,
+    'alto': #D2D2D2,
+    'silver': #C1C1C1,
+    'silver-chalice': #999,
+    'boulder': #7B7B7B,
+    'dove-grey': #5E5E5E,
+    'mine-shaft': #333,
+    'black': #000,
+);
