@@ -2,4 +2,127 @@
 //
 // Main entry file for the SC5 style-guide generator.
 
-@import 'colors';
+@import 'foundation';
+
+@import 'base/colors';
+@import 'base/typography';
+
+// @TODO
+//
+// Document libraries in use. Foundation? Breakpoint? Compass?
+// Document how to work with this - running, readme, etc
+// Changelog
+// stykles-library is what to share with other projects. It may not be npm. It is dependent on Foundation, at least variables. How to do this?
+//
+// Styleguide 0
+
+// Tables and pagination
+//
+// todo description
+//
+// .whatever-goes-here
+//
+// markup:
+// <div class="{$modifiers}"></div>
+//
+// Styleguide 3
+
+// Buttons
+//
+// todo description
+//
+// .whatever-goes-here
+//
+// markup:
+// <div class="{$modifiers}"></div>
+//
+// Styleguide 4
+
+// Forms
+//
+// todo description
+//
+// .whatever-goes-here
+//
+// markup:
+// <div class="{$modifiers}"></div>
+//
+// Styleguide 5
+
+// Cards
+//
+// todo description
+//
+// .whatever-goes-here
+//
+// markup:
+// <div class="{$modifiers}"></div>
+//
+// Styleguide 6
+
+// Breadcrumbs
+//
+// todo description
+//
+// .whatever-goes-here
+//
+// markup:
+// <div class="{$modifiers}"></div>
+//
+// Styleguide 7
+
+// Navigation patterns
+//
+// todo description
+//
+// .whatever-goes-here
+//
+// markup:
+// <div class="{$modifiers}"></div>
+//
+// Styleguide 8
+
+// Tooltips and popovers
+//
+// todo description
+//
+// .whatever-goes-here
+//
+// markup:
+// <div class="{$modifiers}"></div>
+//
+// Styleguide 9
+
+// Grid
+//
+// todo This belongs earlier in this outline.
+//
+// Stykleguide 10
+
+// Helpers
+//
+// Styleguide 15
+
+// Mixins
+//
+// Styleguide 15.1
+
+// Functions
+//
+// Styleguide 15.2
+
+// Breakpoint
+//
+// Should be some easy to use media-query thing. If Foundation doesnt' have, yoink Breakpoint and document here.
+//
+// Styleguide 15.3
+
+// Z`_indexes
+//
+// todo Document this thing WELL. Make warnings. reject compilations.
+//
+// Styleguide 15.4
+
+// !important and other bad-practice management
+//
+// Styleguide 15.5
