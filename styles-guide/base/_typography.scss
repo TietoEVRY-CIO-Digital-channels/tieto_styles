@@ -1,3 +1,8 @@
+// @todo What all should be explicitly imported?
+//@import "../../styles-library/vendor/foundation-sites/_settings.scss";
+//@import "../../node_modules/foundation-sites/scss/typography/typography";
+//@include foundation-global-styles;
+//@include foundation-typography;
 // Typography
 //
 // todo Typography description
@@ -11,11 +16,30 @@
 
 // ARIAL: Websites and campaign sites
 //
-// todo Typography description
+// @todo Typography description. And this markup is a mess.
 //
 // .whatever-goes-here
 //
 // markup:
+//<h1>h1. heading <small>font-size:__</small></h1>
+//<h2>h2. heading <small>font-size:__</small></h2>
+//<h3>h3. heading <small>font-size:__</small></h3>
+//<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
+// parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+//Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+//Donec ullamcorper nulla non metus auctor fringilla. <b>Duis mollis</b>, est non commodo luctus,
+//                                                                    nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus
+//auctor fringilla.Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit
+//non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+//                                                                    eget lacinia odio sem nec elit.</p>
+//<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
+// parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+//Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+//Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
+// nisi erat porttitor ligula, eget lacinia odio sem nec elit. <a href="#">Donec ullamcorper</a> nulla non metus
+//                                                                                            auctor fringilla.Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit
+//                                                                                            non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+//                                                                                            eget lacinia odio sem nec elit.</p>
 // <div class="{$modifiers}"></div>
 //
 // Styleguide 2.1

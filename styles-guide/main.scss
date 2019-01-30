@@ -2,10 +2,20 @@
 //
 // Main entry file for the SC5 style-guide generator.
 
-@import 'foundation';
+// Import Tieto default variables and mixins.
+// Note that these are set using !default, which Foundation also uses. This must be imported first so that Foundation doesn't hijack Tieto defaults.
+@import '../styles-library/vendor/foundation-sites/settings';
+
+// Import Foundation variable !defaults and mixins.
+@import '../node_modules/foundation-sites/scss/foundation';
 
 @import 'base/colors';
 @import 'base/typography';
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+
 
 // @TODO
 //

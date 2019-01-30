@@ -65,7 +65,9 @@
 //  55. Top Bar
 //  56. Xy Grid
 
-@import 'util/util';
+// @todo This import path is weird.
+//@import 'util/util';
+@import "../../../node_modules/foundation-sites/scss/util/util";
 
 // 1. Global
 // ---------
@@ -86,8 +88,8 @@ $dark-gray: #8a8a8a !default;
 $black: #0a0a0a !default;
 $white: #fefefe !default;
 $body-background: $white !default;
-$body-font-color: map-get($tsg-grayscale, 'mine-shaft') !default; // done.
-$body-font-family: Arial, Helvetica, Open-sans !default; // done.
+$body-font-color: red; //map-get($tsg-grayscale, 'mine-shaft') !default; // done.
+$body-font-family: Arial, Helvetica, Open-sans;// !default; // done.
 $body-antialiased: true !default;
 $global-margin: 1rem !default;
 $global-padding: 1rem !default;
