@@ -4,13 +4,15 @@ var sass = require('gulp-sass');
 var tempPath = 'tmp';
 var outputPath = 'docs';
 
+// https://github.com/SC5/sc5-styleguide#build-options
 gulp.task('styleguide:generate:dev', function() {
   return gulp.src('styles-guide/**/*.scss')
     .pipe(styleguide.generate({
         title: 'Tieto Styleguide',
         server: true,
         rootPath: tempPath,
-        overviewPath: 'README.md'
+        overviewPath: 'README.md',
+        disableEncapsulation: true
       }))
     .pipe(gulp.dest(tempPath));
 });
