@@ -60,14 +60,17 @@
 // @todo This results in showing this scss instead of the relevant CSS in the expanded box. How to show the relevant CSS and markup?
 
 .color {
+  // Make the color swatches take some space.
   padding: $global-padding * 2;
 
+  // Iterate the color map.
   @each $name, $color in $tsg-colors {
     &.#{$name} {
       background-color: $color;
     }
   }
 
+  // Iterate the grayscale map.
   @each $name, $color in $tsg-grayscale {
     &.#{$name} {
       background-color: $color;
@@ -75,13 +78,13 @@
   }
 }
 
-.sg {
-  &.sg-section {
-    clear: both;
-
-    .sg.sg-section-partial:not(.sg-code-listing) {
-      width: 25%;
-      float: left;
-    }
-  }
-}
+// @todo Enable this later if needed after figuring out build configuration options.
+// Applies only to the styleguide and only for the color section, which doesn't have a usable semantic name.
+//[id^="section-1"] {
+//  clear: both;
+//
+//  .sg.sg-section-partial:not(.sg-code-listing) {
+//    width: 25%;
+//    float: left;
+//  }
+//}

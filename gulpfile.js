@@ -12,7 +12,11 @@ gulp.task('styleguide:generate:dev', function() {
         server: true,
         rootPath: tempPath,
         overviewPath: 'README.md',
-        disableEncapsulation: true
+        disableEncapsulation: true,
+        sideNav: true,
+        showReferenceNumbers: true,
+        commonClass: 'tsg',
+        server: true
       }))
     .pipe(gulp.dest(tempPath));
 });
