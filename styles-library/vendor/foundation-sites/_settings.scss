@@ -76,13 +76,20 @@
 $global-font-size: rem-calc(14); // 100% !default;
 $global-width: rem-calc(1200) !default;
 $global-lineheight: 1.5 !default;
+//$foundation-palette: (
+//  primary:  #1779ba,
+//  secondary: #767676,
+//  success: #3adb76,
+//  warning: #ffae00,
+//  alert: #cc4b37,
+//) !default;
 $foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
-) !default;
+  primary:  map-get($tsg-colors, 'picton-blue'),
+  secondary: purple, // @todo Should be grey, like cancel button.
+  success: map-get($tsg-colors, 'apple'), // @todo Frontify shows #5cb85c as possible success color, which doesn't match any of our defined branding colors.
+  warning: map-get($tsg-colors, 'cornflower'),
+  alert: map-get($tsg-colors, 'deep-blush'), // @todo Razzmatazz on hover?
+);// !default;
 $light-gray: #e6e6e6 !default;
 $medium-gray: #cacaca !default;
 $dark-gray: #8a8a8a !default;
