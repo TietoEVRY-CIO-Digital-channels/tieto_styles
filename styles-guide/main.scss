@@ -2,21 +2,22 @@
 //
 // Main entry file for the SC5 style-guide generator.
 
-// Import Tieto default variables and mixins.
-// Note that these are set using !default, which Foundation also uses. This must be imported first so that Foundation doesn't hijack Tieto defaults.
-@import '../styles-library/vendor/foundation-sites/settings';
-
 // Import Foundation variable !defaults and mixins.
 @import '../node_modules/foundation-sites/scss/foundation';
 
-//@import 'base/colors';
-@import 'base/typography';
-@include foundation-everything();
-//@include foundation-global-styles;
-//@include foundation-forms;
-//@include foundation-typography;
+// Tieto base variables, mixins and functions needed for Tieto's _settings.scss (Foundation overrides).
+@import 'base/colors';
 
+// Import Tieto default variables and mixins.
+// Note It would be nice to set variables with SASS !default, which Foundation also uses. This must be imported first so that Foundation doesn't hijack Tieto defaults.
+// @todo Figure out how to make it work, apparently we can't use !default if Foundation needs to be imported first.
+// http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_defaults_default
+@import '../styles-library/vendor/foundation-sites/settings';
 
+//@import 'base/typography';
+@include foundation-everything(); // @todo Not this. This is just for development purposes, let's not include everything.
+
+@import 'shame';
 
 // @TODO
 //

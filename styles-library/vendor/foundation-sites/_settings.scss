@@ -67,12 +67,13 @@
 
 // @todo This import path is weird.
 //@import 'util/util';
-@import "../../../node_modules/foundation-sites/scss/util/util";
+//@import "../../../node_modules/foundation-sites/scss/util/util";
+
+// All variables defined with !default are initial values from Foundation. Without !default, these are Tieto's own custom variables.
 
 // 1. Global
 // ---------
-// @todo All of these, remove 'done' comments when verified.
-$global-font-size: 100% !default;
+$global-font-size: rem-calc(14); // 100% !default;
 $global-width: rem-calc(1200) !default;
 $global-lineheight: 1.5 !default;
 $foundation-palette: (
@@ -88,8 +89,8 @@ $dark-gray: #8a8a8a !default;
 $black: #0a0a0a !default;
 $white: #fefefe !default;
 $body-background: $white !default;
-$body-font-color: red; //map-get($tsg-grayscale, 'mine-shaft') !default; // done.
-$body-font-family: Arial, Helvetica, Open-sans;// !default; // done.
+$body-font-color: map-get($tsg-grayscale, 'mine-shaft'); // !default;
+$body-font-family: Arial, Helvetica, Open-sans; // !default;
 $body-antialiased: true !default;
 $global-margin: 1rem !default;
 $global-padding: 1rem !default;
@@ -138,35 +139,37 @@ $block-grid-max: 8 !default;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family !default;
+$header-font-family: $body-font-family; // !default;
 $header-font-weight: $global-weight-normal !default;
 $header-font-style: normal !default;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace !default;
 $header-color: inherit !default;
-$header-lineheight: 1.8 !default; // done.
+$header-lineheight: 1.8;// !default;
 $header-margin-bottom: 0.5rem !default;
+// https://foundation.zurb.com/sites/docs/typography-base.html#header-styles - Check here for additional config options for line-height and margins.
+// @todo As Foundation ignores unknown config options, letter-spacing and other details must be defined elsewhere.
 $header-styles: (
     small: (
-        'h1': ('font-size': 40, 'font-weight': bold, 'letter-spacing': -0.032em),// 4rem //24),
-        'h2': ('font-size': 33, 'line-height': 1, 'font-weight': 600, 'letter-spacing': -0.022em),//20),
-        'h3': ('font-size': 25, 'font-weight': 400, 'letter-spacing': -0.022em),//19),
-        'h4': ('font-size': 20, 'line-height': 1.2),//18),
-        'h5': ('font-size': 16, 'line-height': 1.5, 'letter-spacing': -0.05em),//17),
-        'h6': ('font-size': 14,  'letter-spacing': -0.017em),//16),
+        'h1': ('font-size': 40, 'font-weight': bold, 'letter-spacing': -0.032em),
+        'h2': ('font-size': 33, 'font-weight': 600, 'letter-spacing': -0.022em),
+        'h3': ('font-size': 25, 'font-weight': 400, 'letter-spacing': -0.022em),
+        'h4': ('font-size': 20),
+        'h5': ('font-size': 16, 'letter-spacing': -0.05em),
+        'h6': ('font-size': 14, 'letter-spacing': -0.017em),
     ),
     medium: (
-        'h1': ('font-size': 40, 'font-weight': bold, 'letter-spacing': -0.032em),//48),
-        'h2': ('font-size': 33, 'line-height': 1, 'font-weight': 600, 'letter-spacing': -0.022em),//40),
-        'h3': ('font-size': 25, 'font-weight': 400, 'letter-spacing': -0.022em),//31),
-        'h4': ('font-size': 20, 'line-height': 1.2),//25),
-        'h5': ('font-size': 16, 'line-height': 1.5,  'letter-spacing': -0.05em),//20),
-        'h6': ('font-size': 14,  'letter-spacing': -0.017em),//16),
+        'h1': ('font-size': 40, 'font-weight': bold, 'letter-spacing': -0.032em),
+        'h2': ('font-size': 33, 'font-weight': 600, 'letter-spacing': -0.022em),
+        'h3': ('font-size': 25, 'font-weight': 400, 'letter-spacing': -0.022em),
+        'h4': ('font-size': 20),
+        'h5': ('font-size': 16,  'letter-spacing': -0.05em),
+        'h6': ('font-size': 14,  'letter-spacing': -0.017em),
     ),
-) !default; // done.
+); // !default;
 $header-text-rendering: optimizeLegibility !default;
 $small-font-size: 80% !default;
 $header-small-font-color: $medium-gray !default;
-$paragraph-lineheight: 1.6 !default;
+$paragraph-lineheight: 1.8;// !default;
 $paragraph-margin-bottom: 1rem !default;
 $paragraph-text-rendering: optimizeLegibility !default;
 $code-color: $black !default;
