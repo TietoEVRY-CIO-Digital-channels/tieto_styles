@@ -57,6 +57,8 @@
 //
 // Styleguide 1.2
 
+// @todo This results in showing this scss instead of the relevant CSS in the expanded box. How to show the relevant CSS and markup?
+
 .color {
   padding: $global-padding * 2;
 
@@ -69,6 +71,17 @@
   @each $name, $color in $tsg-grayscale {
     &.#{$name} {
       background-color: $color;
+    }
+  }
+}
+
+.sg {
+  &.sg-section {
+    clear: both;
+
+    .sg.sg-section-partial:not(.sg-code-listing) {
+      width: 25%;
+      float: left;
     }
   }
 }
