@@ -1,6 +1,7 @@
+@import '../../base/index';
+
 // This is the settings available from Foundation. We customize them here to fit Tieto styles. Inport this file to have the variables available and @todo finish this sentence.
 
-// !default has been added to all variable settings in this file to make it easier to override variables in other projects which might use this.
 // All variables are uncommented, but not all components are used. See comments on each section to know if the component has been customized for Tieto's use. If there's no comment, it's not customized. Feel free to make a pull request with a customized component, if it belongs to Tieto's common styles and hasn't yet been completed.
 
 //  Foundation for Sites Settings
@@ -76,20 +77,13 @@
 $global-font-size: rem-calc(14); // 100% !default;
 $global-width: rem-calc(1200) !default;
 $global-lineheight: 1.5 !default;
-//$foundation-palette: (
-//  primary:  #1779ba,
-//  secondary: #767676,
-//  success: #3adb76,
-//  warning: #ffae00,
-//  alert: #cc4b37,
-//) !default;
 $foundation-palette: (
   primary:  map-get($tsg-colors, 'picton-blue'),
-  secondary: purple, // @todo Should be grey, like cancel button.
-  success: map-get($tsg-colors, 'apple'), // @todo Frontify shows #5cb85c as possible success color, which doesn't match any of our defined branding colors.
+  secondary: map-get($tsg-grayscale, 'mercury'),
+  success: map-get($tsg-colors, 'apple'),
   warning: map-get($tsg-colors, 'cornflower'),
-  alert: map-get($tsg-colors, 'deep-blush'), // @todo Razzmatazz on hover?
-);// !default;
+  alert: map-get($tsg-colors, 'deep-blush'),
+); //!default;
 $light-gray: #e6e6e6 !default;
 $medium-gray: #cacaca !default;
 $dark-gray: #8a8a8a !default;
@@ -104,14 +98,14 @@ $global-padding: 1rem !default;
 $global-position: 1rem !default;
 $global-weight-normal: normal !default;
 $global-weight-bold: bold !default;
-$global-radius: 0 !default;
+$global-radius: 2px; // !default;
 $global-menu-padding: 0.7rem 1rem !default;
 $global-menu-nested-margin: 1rem !default;
 $global-text-direction: ltr !default;
 $global-flexbox: true !default;
 $global-prototype-breakpoints: false !default;
 $global-button-cursor: auto !default;
-$global-color-pick-contrast-tolerance: 0 !default;
+$global-color-pick-contrast-tolerance: 5;// !default;
 $print-transparent-backgrounds: true !default;
 
 @include add-foundation-colors;
@@ -295,28 +289,27 @@ $breadcrumbs-item-separator-color: $medium-gray !default;
 
 // 11. Button
 // ----------
-
 $button-font-family: inherit !default;
-$button-padding: 0.85em 1em !default;
+$button-padding: 15px 40px;
 $button-margin: 0 0 $global-margin 0 !default;
 $button-fill: solid !default;
-$button-background: $primary-color !default; // @todo #f5f5f5?
-$button-background-hover: scale-color($button-background, $lightness: -15%) !default; // @todo $tsg-picton-blue
-$button-color: $white !default; // @todo.
-$button-color-alt: $black !default;
-$button-radius: $global-radius !default; // @todo.
+$button-background: $primary-color;
+$button-background-hover: map-get($tsg-colors, 'bahama-blue');
+$button-color: map-get($tsg-grayscale, 'white');
+$button-color-alt: map-get($tsg-grayscale, 'mine-shaft');
+$button-radius: $global-radius;
 $button-hollow-border-width: 1px !default;
 $button-sizes: (
-  tiny: 0.6rem,
-  small: 0.75rem,
-  default: 0.9rem,
-  large: 1.25rem,
-) !default;
-$button-palette: $foundation-palette !default;
-$button-opacity-disabled: 0.25 !default;
+  tiny: 9.5px,
+  small: 11px,
+  default: 12px,
+  large: 13px,
+);
+$button-palette: $foundation-palette;
+$button-opacity-disabled: 0.65;
 $button-background-hover-lightness: -20% !default;
 $button-hollow-hover-lightness: -50% !default;
-$button-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
+$button-transition: all 0.3s ease 0s;
 $button-responsive-expanded: false !default;
 
 // 12. Button Group

@@ -1,0 +1,56 @@
+// All base variables, mixins and functions needed by Tieto Styles.
+@import '../base/index';
+
+@mixin tsg-button-legacy-classes {
+  // @todo Can we use @extend to make classes previously in use compatible?
+}
+
+@mixin tsg-button-size {
+  @each $size, $styles in $tsg-button-sizes {
+    &.#{$size} {
+      @include tsg-apply-styles($styles);
+    }
+  }
+}
+
+@mixin tsg-button-color {
+  @each $key, $color in $tsg-button-palette--hover {
+    &.#{$key} {
+      @include tsg-hover-styles {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+@mixin tsg-button-hollow {
+  &.hollow {
+    @include tsg-link-colors(map-get($tsg-grayscale, 'mine-shaft'), map-get($tsg-grayscale, 'white'), map-get($tsg-grayscale, 'white'), map-get($tsg-grayscale, 'mine-shaft'), map-get($tsg-grayscale, 'white'));
+    border-color: map-get($tsg-grayscale, 'mercury');
+
+    @include tsg-hover-styles {
+      border-color: map-get($tsg-colors, 'curious-blue');
+    }
+  }
+}
+
+@mixin tsg-button {
+  .button {
+    @include tsg-button-size;
+    @include tsg-button-color;
+    @include tsg-button-hollow;
+
+    text-transform: $tsg-button__text-transform;
+    letter-spacing: $tsg-button__letter-spacing;
+    font-weight: $tsg-button__font-weight;
+    text-rendering: $tsg-text-rendering;
+
+    &.shadow:not(:hover) {
+      box-shadow: $tsg-button__shadow;
+    }
+
+    &.round {
+      border-radius: $tsg-button__radius--round;
+    }
+  }
+}

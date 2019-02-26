@@ -6,6 +6,22 @@
 //
 // Styleguide 1.0
 
+.color {
+  // Make the color swatches take some space.
+  padding: $global-padding * 2;
+}
+
+// @todo Enable this later if needed after figuring out build configuration options.
+// Applies only to the styleguide and only for the color section, which doesn't have a usable semantic name.
+//[id^="section-1"] {
+//  clear: both;
+//
+//  .sg.sg-section-partial:not(.sg-code-listing) {
+//    width: 25%;
+//    float: left;
+//  }
+//}
+
 // Colors
 //
 // An info cards with the colors and description.
@@ -35,6 +51,36 @@
 //
 // Styleguide 1.1
 
+// Variable map of Tieto colors.
+$tsg-colors: (
+  // Primary colour
+    'picton-blue': #62B3E5,
+  // Blue in user interfaces
+    'curious-blue': #2C89C3,
+  // Supporting colours
+    'deep-blush': #E56385,
+    'apple': #6CC04A,
+    'cornflower': #F78D2D,
+  // Secondary colours
+    'cornflower-1': #9ACAEB,
+    'bahama-blue': #0065A0,
+    'azalea': #F0B3CA,
+    'razzmatazz': #D51067,
+    'yellow-green': #BDE093,
+    'fun-green': #00833E,
+    'macaroni-and-cheese': #FFBE85,
+    'tenn': #D75F00,
+);
+
+.color {
+  // Iterate the color map.
+  @each $name, $color in $tsg-colors {
+    &.#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
 // Grayscale
 //
 // An info cards with the colors and description.
@@ -59,17 +105,22 @@
 
 // @todo This results in showing this scss instead of the relevant CSS in the expanded box. How to show the relevant CSS and markup?
 
+// Greyscale colours
+$tsg-grayscale: (
+    'white': #fff,
+    'alabaster': #F8F8F8,
+    'iron': #EEEFF0,
+    'mercury': #E5E3E3,
+    'alto': #D2D2D2,
+    'silver': #C1C1C1,
+    'silver-chalice': #999,
+    'boulder': #7B7B7B,
+    'dove-grey': #5E5E5E,
+    'mine-shaft': #333,
+    'black': #000,
+);
+
 .color {
-  // Make the color swatches take some space.
-  padding: $global-padding * 2;
-
-  // Iterate the color map.
-  @each $name, $color in $tsg-colors {
-    &.#{$name} {
-      background-color: $color;
-    }
-  }
-
   // Iterate the grayscale map.
   @each $name, $color in $tsg-grayscale {
     &.#{$name} {
@@ -77,14 +128,3 @@
     }
   }
 }
-
-// @todo Enable this later if needed after figuring out build configuration options.
-// Applies only to the styleguide and only for the color section, which doesn't have a usable semantic name.
-//[id^="section-1"] {
-//  clear: both;
-//
-//  .sg.sg-section-partial:not(.sg-code-listing) {
-//    width: 25%;
-//    float: left;
-//  }
-//}

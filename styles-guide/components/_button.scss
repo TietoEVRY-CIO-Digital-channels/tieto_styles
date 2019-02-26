@@ -1,0 +1,142 @@
+@import "../../styles-library/vendor/foundation-sites/_settings";
+@import "../../styles-library/components/button";
+@import "../../node_modules/foundation-sites/scss/components/button";
+
+// Buttons
+//
+// Buttons can be defined with either `<a>` or `<button>`. The `.button` class is required. Additional classes may be added as below to alter the appearance of the button. Without additional classes, `.button` class will select `.primary` as default.
+//
+// Note that buttons are using Foundation button classes as they rely heavily on Foundation framework for styling.
+//
+// <div class="tsg-subsection-header">Accessibility</div>
+// <p>Make sure that the text of the button is descriptive. If for some reason, your button contains no readable text (for example, just a symbol or icon), add screen reader-only text to the button to clarify its purpose. The symbol or icon should be wrapped in an element with the attribute `aria-hidden="true"`, to prevent screen readers from trying to pronounce the symbol.</p>
+// <p>Use the `.show-for-sr` class to define screen reader-only text.</p>
+//
+// .primary - primary
+// .secondary - secondary
+// .success - success
+// .alert - alert
+// .warning - warning
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers} button</button>
+// <a href class="button {$modifiers}">{$modifiers} button</a>
+//
+// Styleguide 4
+
+@include foundation-button;
+
+// Button sizes
+//
+// .tiny - Tiny
+// .small - Small
+// .button - Default
+// .large - Large
+// .expanded - Expanded
+// .small.expanded - Small expanded
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers} button</button>
+// <a href class="button {$modifiers}">{$modifiers} link</a>
+//
+// Styleguide 4.1
+
+@include tsg-button;
+
+// Yes / no
+//
+// markup:
+// <button class="button success">Say yes</button>
+// <button class="button secondary">Cancel</button>
+//
+// Styleguide 4.2
+
+// Red button
+//
+// markup:
+// <button class="button alert">Danger button</button>
+// <a href class="button alert">Danger link</a>
+//
+// Styleguide 4.3
+
+// Normal buttons with shadow
+//
+// .primary.shadow - Primary
+// .success.shadow - Success
+// .secondary.shadow - Secondary
+//
+// markup:
+// <button class="button {$modifiers}">Button with shadow</button>
+// <a href class="button {$modifiers}">Link with shadow</a>
+//
+// Styleguide 4.5
+
+// Disabled
+//
+// .disabled - Disabled
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers} button</button>
+// <a href class="button {$modifiers}">{$modifiers} link</a>
+//
+// Styleguide 4.6
+
+// Hollow (Ghost) button
+//
+// .hollow - Hollow (Ghost)
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers}</button>
+// <a href class="button {$modifiers}">{$modifiers}</a>
+//
+// Styleguide 4.7
+
+// Outline button with background
+//
+// .hollow - Hollow (Ghost)
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers}</button>
+// <a href class="button {$modifiers}">{$modifiers}</a>
+//
+// Styleguide 4.8
+
+// Hollow (Ghost) button round
+//
+// @todo Combine this with other ghost button
+//
+// .hollow.round - Hollow (Ghost)
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers}</button>
+// <a href class="button {$modifiers}">{$modifiers}</a>
+//
+// Styleguide 4.9
+
+// Round buttons
+//
+// .round.shadow - Round buttons with shadow
+//
+// markup:
+// <button class="button primary {$modifiers}">{$modifiers}</button>
+// <button class="button success {$modifiers}">{$modifiers}</button>
+// <button class="button secondary {$modifiers}">{$modifiers}</button>
+//
+// Styleguide 4.10
+
+// styleguide:ignore:start
+// This demo probably doesn't need to be recreated and can't be without icons yet.
+
+// Loading
+//
+// .loading - Loading
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers}</button>
+// <a href class="button {$modifiers}">{$modifiers}</a>
+//
+// Styleguide 4.11
+
+// styleguide:ignore:end
+
+

@@ -5,17 +5,26 @@
 // Import Foundation variable !defaults and mixins.
 @import '../node_modules/foundation-sites/scss/foundation';
 
+@import '../styles-library/base/variables';
+@import '../styles-library/base/functions';
+@import '../styles-library/base/mixins';
+@import '../styles-library/base/colors';
+@import '../styles-library/base/typography';
+@import '../styles-library/base/icons';
+
 // Tieto base variables, mixins and functions needed for Tieto's _settings.scss (Foundation overrides).
-@import 'base/colors';
+//@import '../styles-library/base/colors';
 
 // Import Tieto default variables and mixins.
 // Note It would be nice to set variables with SASS !default, which Foundation also uses. This must be imported first so that Foundation doesn't hijack Tieto defaults.
 // @todo Figure out how to make it work, apparently we can't use !default if Foundation needs to be imported first.
 // http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_defaults_default
-@import '../styles-library/vendor/foundation-sites/settings';
+//@import '../styles-library/vendor/foundation-sites/settings';
 
-//@import 'base/typography';
-@include foundation-everything(); // @todo Not this. This is just for development purposes, let's not include everything.
+@import 'base/colors';
+@import 'base/typography';
+
+@import 'components/button';
 
 @import 'shame';
 
@@ -39,16 +48,6 @@
 //
 // Styleguide 3
 
-// Buttons
-//
-// todo description
-//
-// .whatever-goes-here
-//
-// markup:
-// <div class="{$modifiers}"></div>
-//
-// Styleguide 4
 
 // Forms
 //
@@ -109,7 +108,7 @@
 //
 // todo This belongs earlier in this outline.
 //
-// Stykleguide 10
+// Styleguide 10
 
 // Helpers
 //
@@ -129,7 +128,7 @@
 //
 // Styleguide 15.3
 
-// Z`_indexes
+// Z indexes
 //
 // todo Document this thing WELL. Make warnings. reject compilations.
 //

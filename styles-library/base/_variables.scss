@@ -1,3 +1,39 @@
+@import 'colors';
+
 // This file is for Tieto custom variables which do not already exist in dependency modules.
 // Verify that there isn't already an existing configuration variable available to customize before creating a new one!
 
+// General
+$tsg-text-rendering: optimizeLegibility;
+
+// Buttons.
+$tsg-button-palette--hover: (
+    primary:  map-get($tsg-colors, 'bahama-blue'),
+    secondary: map-get($tsg-grayscale, 'mercury'),
+    success: map-get($tsg-colors, 'fun-green'),
+    warning: map-get($tsg-colors, 'tenn'),
+    alert: map-get($tsg-colors, 'razzmatazz'),
+    hollow: map-get($tsg-colors, 'curious-blue'),
+);
+$tsg-button-sizes: (
+    tiny: (
+        'min-width': 100px,
+        'padding': 7px 15px,
+    ),
+    small: (
+        'min-width': 100px,
+        'padding': 9px 0,
+    ),
+    default: (
+        'min-width': 170px
+    ),
+    large: (
+        'min-width': 200px,
+        'padding': 19px 60px,
+    ),
+);
+$tsg-button__text-transform: uppercase;
+$tsg-button__letter-spacing: -0.002em;
+$tsg-button__font-weight: 500; // @todo This should be assigned to an exissting more generic typography related variable.
+$tsg-button__shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$tsg-button__radius--round: 100px;
