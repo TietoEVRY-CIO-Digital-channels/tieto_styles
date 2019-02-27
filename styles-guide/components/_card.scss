@@ -1,0 +1,87 @@
+@import "../../styles-library/vendor/foundation-sites/_settings";
+@import "../../styles-library/components/card";
+@import "../../node_modules/foundation-sites/scss/components/card";
+
+// Cards
+//
+// Cards are an efficient and modern way of displaying information and building dashboards. Cards also work well in responsive user interfaces. Keep the overall atmosphere calm when using cards to avoid distraction and confusion.
+//
+// markup:
+// <section>
+// <div class="card">
+// <div class="card-image">
+// <img class="img-responsive" src="http://fabriccreative.com/wp-content/uploads/2014/05/grace-face-1.jpg">
+// <span class="card-title">Material Cards</span>
+// </div>
+// <div class="card-contentx card-section">
+// <p>Cards for display in portfolio style material design by Google.</p>
+// <div class="card-divider">test</div>
+// <p>Cards for display in portfolio style material design by Google.</p>
+// </div>
+// <div class="card-action">
+// <a href="#" target="new_blank">Action</a>
+// <a href="#" target="new_blank">Dismiss</a>
+// <a href="#" target="new_blank">Link</a>
+// </div>
+// </div>
+// <div class="card">
+// <div class="card-image">
+// <img class="img-responsive" src="http://fabriccreative.com/wp-content/uploads/2014/05/grace-face-1.jpg">
+// <span class="card-title">Material Cards</span>
+// </div>
+// <div class="card-content card-section">
+// <p>Cards for display in portfolio style material design by Google.</p>
+// <div class="card-divider"></div>
+// <p>Cards for display in portfolio style material design by Google.</p>
+// </div>
+// <div class="card-action">
+// <a href="#" target="new_blank">Action</a>
+// <a href="#" target="new_blank">Dismiss</a>
+// <a href="#" target="new_blank">Link</a>
+// </div>
+// </div>
+// </section>
+//
+// Styleguide 6
+
+@include foundation-card;
+
+// Cards, Foundation style
+//
+// Cards are an efficient and modern way of displaying information and building dashboards. Cards also work well in responsive user interfaces. Keep the overall atmosphere calm when using cards to avoid distraction and confusion.
+//
+// markup:
+// <section>
+// <div class="card">
+// <div class="card-image">
+// <img class="img-responsive" src="http://fabriccreative.com/wp-content/uploads/2014/05/grace-face-1.jpg">
+// </div>
+// <div class="card-contentx card-section">
+// <p>Cards for display in portfolio style material design by Google.</p>
+// <div class="card-divider">test</div>
+// <p>Cards for display in portfolio style material design by Google.</p>
+// <div class="card-action">
+// <a href="#" target="new_blank">Action</a>
+// <a href="#" target="new_blank">Dismiss</a>
+// <a href="#" target="new_blank">Link</a>
+// </div>
+// </div>
+// </div>
+// <div class="card">
+// <div class="card-image">
+// <img class="img-responsive" src="http://fabriccreative.com/wp-content/uploads/2014/05/grace-face-1.jpg">
+// </div>
+// <div class="card-content card-section">
+// <p>Cards for display in portfolio style material design by Google.</p>
+// <div class="card-divider"></div>
+// <p>Cards for display in portfolio style material design by Google.</p>
+// <div class="card-action">
+// <a href="#" target="new_blank">Action</a>
+// <a href="#" target="new_blank">Dismiss</a>
+// <a href="#" target="new_blank">Link</a>
+// </div>
+// </div>
+// </div>
+// </section>
+//
+// Styleguide 6.1

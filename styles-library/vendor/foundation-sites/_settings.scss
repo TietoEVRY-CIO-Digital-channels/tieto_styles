@@ -341,7 +341,7 @@ $card-background: $white !default;
 $card-font-color: $body-font-color !default;
 $card-divider-background: $light-gray !default;
 $card-border: none !default; // @todo done. 1px solid $light-gray !default;
-$card-shadow: none !default;
+$card-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.08); //none !default;
 $card-border-radius: $global-radius !default;
 $card-padding: $global-padding $global-padding (1.5 * $global-padding); // @todo done. $global-padding !default;
 $card-margin-bottom: 0 !default; // @todo done. $global-margin !default;
