@@ -74,8 +74,8 @@
 
 // 1. Global
 // ---------
-$global-font-size: rem-calc(14); // 100% !default;
-$global-width: rem-calc(1200) !default;
+$global-font-size: 100%;// rem-calc(14); // 100% !default;
+$global-width: rem-calc(1200);
 $global-lineheight: 1.5 !default;
 $foundation-palette: (
   primary:  map-get($tsg-colors, 'picton-blue'),
@@ -126,13 +126,13 @@ $breakpoint-classes: (small medium large) !default;
 
 // 3. The Grid
 // -----------
-// @todo
 $grid-row-width: $global-width !default;
 $grid-column-count: 12 !default;
-$grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
-) !default;
+//$grid-column-gutter: (
+//  small: 20px,
+//  medium: 30px,
+//) !default;
+$grid-column-gutter: $global-margin;
 $grid-column-align-edge: true !default;
 $grid-column-alias: 'columns' !default;
 $block-grid-max: 8 !default;
@@ -289,28 +289,28 @@ $breadcrumbs-item-separator-color: $medium-gray !default;
 
 // 11. Button
 // ----------
-$button-font-family: inherit !default;
-$button-padding: 15px 40px;
-$button-margin: 0 0 $global-margin 0 !default;
-$button-fill: solid !default;
-$button-background: $primary-color;
-$button-background-hover: map-get($tsg-colors, 'bahama-blue');
-$button-color: map-get($tsg-grayscale, 'white');
-$button-color-alt: map-get($tsg-grayscale, 'mine-shaft');
-$button-radius: $global-radius;
-$button-hollow-border-width: 1px !default;
-$button-sizes: (
-  tiny: 9.5px,
-  small: 11px,
-  default: 12px,
-  large: 13px,
-);
-$button-palette: $foundation-palette;
-$button-opacity-disabled: 0.65;
-$button-background-hover-lightness: -20% !default;
-$button-hollow-hover-lightness: -50% !default;
-$button-transition: all 0.3s ease 0s;
-$button-responsive-expanded: false !default;
+//$button-font-family: inherit !default;
+//$button-padding: 15px 40px;
+//$button-margin: 0 0 $global-margin 0 !default;
+//$button-fill: solid !default;
+//$button-background: $primary-color;
+//$button-background-hover: map-get($tsg-colors, 'bahama-blue');
+//$button-color: map-get($tsg-grayscale, 'white');
+//$button-color-alt: map-get($tsg-grayscale, 'mine-shaft');
+//$button-radius: $global-radius;
+//$button-hollow-border-width: 1px !default;
+//$button-sizes: (
+//  tiny: 9.5px,
+//  small: 11px,
+//  default: 12px,
+//  large: 13px,
+//);
+//$button-palette: $foundation-palette;
+//$button-opacity-disabled: 0.65;
+//$button-background-hover-lightness: -20% !default;
+//$button-hollow-hover-lightness: -50% !default;
+//$button-transition: all 0.3s ease 0s;
+//$button-responsive-expanded: false !default;
 
 // 12. Button Group
 // ----------------
@@ -343,8 +343,8 @@ $card-divider-background: $light-gray !default;
 $card-border: none !default; // @todo done. 1px solid $light-gray !default;
 $card-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.08); //none !default;
 $card-border-radius: $global-radius !default;
-$card-padding: $global-padding $global-padding (1.5 * $global-padding); // @todo done. $global-padding !default;
-$card-margin-bottom: 0 !default; // @todo done. $global-margin !default;
+$card-padding: $global-padding;
+$card-margin-bottom: $global-margin * 2;
 
 // 15. Close Button
 // ----------------
@@ -864,16 +864,12 @@ $topbar-unstack-breakpoint: medium !default;
 
 // 56. Xy Grid
 // -----------
-// @todo
-$xy-grid: true !default;
-$grid-container: $global-width !default;
-$grid-columns: 12 !default;
-$grid-margin-gutters: (
-  small: 20px,
-  medium: 30px
-) !default;
-$grid-padding-gutters: $grid-margin-gutters !default;
-$grid-container-padding: $grid-padding-gutters !default;
-$grid-container-max: $global-width !default;
-$xy-block-grid-max: 8 !default;
+$xy-grid: true;
+$grid-container: $global-width;
+$grid-columns: 12;
+$grid-margin-gutters: $global-margin;
+$grid-padding-gutters: $grid-margin-gutters;
+$grid-container-padding: $grid-padding-gutters;
+$grid-container-max: $global-width;
+$xy-block-grid-max: 8;
 

@@ -24,7 +24,7 @@
 //
 // Styleguide 4
 
-@include foundation-button;
+@include tsg-button;
 
 // Button sizes
 //
@@ -40,8 +40,6 @@
 // <a href class="button {$modifiers}">{$modifiers} link</a>
 //
 // Styleguide 4.1
-
-@include tsg-button;
 
 // Yes / no
 //

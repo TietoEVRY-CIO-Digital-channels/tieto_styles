@@ -72,12 +72,11 @@ $tsg-colors: (
     'tenn': #D75F00,
 );
 
-.color {
-  // Iterate the color map.
-  @each $name, $color in $tsg-colors {
-    &.#{$name} {
-      background-color: $color;
-    }
+// @todo This should be in styles-library, maybe acknowledging background and foreground or text colors.
+// Iterate the color map.
+@each $name, $color in $tsg-colors {
+  &.#{$name} {
+    background-color: $color;
   }
 }
 
@@ -120,11 +119,9 @@ $tsg-grayscale: (
     'black': #000,
 );
 
-.color {
-  // Iterate the grayscale map.
-  @each $name, $color in $tsg-grayscale {
-    &.#{$name} {
-      background-color: $color;
-    }
+// Iterate the grayscale map.
+@each $name, $color in $tsg-grayscale {
+  &.#{$name} {
+    background-color: $color;
   }
 }

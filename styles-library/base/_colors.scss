@@ -131,3 +131,79 @@ $tsg-grayscale: (
     'mine-shaft': #333,
     'black': #000,
 );
+
+@function tsg-get-color($color) {
+  @if $color = map-get($tsg-colors($color)) {
+    @return $color;
+  }
+  @else if $color = map-get($tsg-grayscale($color)) {
+    @return $color;
+  }
+  @else {
+    @warn $color + ' is not a valid Tieto branding color.';
+  }
+}
+
+@mixin tsg-iterate-colors($color-map) {
+  @each $name, $color in $color-map {
+    .color--#{$name} {
+      color: $color;
+    }
+
+    .background--#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+//@mixin tsg-background-2($attr: background) {
+//  // Iterate the color map.
+//  @each $name, $color in $tsg-colors {
+//    .background--#{$name} {
+//      background-color: $color;
+//    }
+//  }
+//
+//  // Iterate the grayscale map.
+//  @each $name, $color in $tsg-grayscale {
+//    .background--#{$name} {
+//      background-color: $color;
+//    }
+//  }
+//}
+//
+//@mixin tsg-background {
+//  // Iterate the color map.
+//  @each $name, $color in $tsg-colors {
+//    .background--#{$name} {
+//      background-color: $color;
+//    }
+//  }
+//
+//  // Iterate the grayscale map.
+//  @each $name, $color in $tsg-grayscale {
+//    .background--#{$name} {
+//      background-color: $color;
+//    }
+//  }
+//}
+
+@mixin tsg-color {
+  @include tsg-iterate-colors($tsg-colors);
+  @include tsg-iterate-colors($tsg-grayscale);
+
+  //// Iterate the color map.
+  //@each $name, $color in $tsg-colors {
+  //  .color--#{$name} {
+  //    color: $color;
+  //  }
+  //}
+  //
+  //// Iterate the grayscale map.
+  //@each $name, $color in $tsg-grayscale {
+  //  .color--#{$name} {
+  //    color: $color;
+  //  }
+  //}
+  //
+}
