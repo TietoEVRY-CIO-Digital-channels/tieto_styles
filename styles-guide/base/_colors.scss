@@ -51,35 +51,6 @@
 //
 // Styleguide 1.1
 
-// Variable map of Tieto colors.
-$tsg-colors: (
-  // Primary colour
-    'picton-blue': #62B3E5,
-  // Blue in user interfaces
-    'curious-blue': #2C89C3,
-  // Supporting colours
-    'deep-blush': #E56385,
-    'apple': #6CC04A,
-    'cornflower': #F78D2D,
-  // Secondary colours
-    'cornflower-1': #9ACAEB,
-    'bahama-blue': #0065A0,
-    'azalea': #F0B3CA,
-    'razzmatazz': #D51067,
-    'yellow-green': #BDE093,
-    'fun-green': #00833E,
-    'macaroni-and-cheese': #FFBE85,
-    'tenn': #D75F00,
-);
-
-// @todo This should be in styles-library, maybe acknowledging background and foreground or text colors.
-// Iterate the color map.
-@each $name, $color in $tsg-colors {
-  &.#{$name} {
-    background-color: $color;
-  }
-}
-
 // Grayscale
 //
 // An info cards with the colors and description.
@@ -102,26 +73,139 @@ $tsg-colors: (
 //
 // Styleguide 1.2
 
-// @todo This results in showing this scss instead of the relevant CSS in the expanded box. How to show the relevant CSS and markup?
+// Working with color maps
+//
+// `@mixin tsg-color()` - Generates classes like `.color--picton-blue`, `.background--picton-blue`, and `.picton-blue`.
+//
+// `.picton-blue` is the same as `.background--picton-blue`, although `.background--picton-blue` is the preferred naming standard.<br/>
+// `.color--picton-blue` will apply the color to the `color` CSS property.
+//
+// The colors are stored in two variable maps, `$tsg-colors` and `$tsg-grayscale`. To get a single color from the map in SCSS, you can use the function `tsg-get-color('picton-blue')`, which will search both maps and return the hex value of the color name passed to the function.
+//
+// Styleguide 1.3
 
-// Greyscale colours
-$tsg-grayscale: (
-    'white': #fff,
-    'alabaster': #F8F8F8,
-    'iron': #EEEFF0,
-    'mercury': #E5E3E3,
-    'alto': #D2D2D2,
-    'silver': #C1C1C1,
-    'silver-chalice': #999,
-    'boulder': #7B7B7B,
-    'dove-grey': #5E5E5E,
-    'mine-shaft': #333,
-    'black': #000,
-);
+@include tsg-color;
 
-// Iterate the grayscale map.
-@each $name, $color in $tsg-grayscale {
-  &.#{$name} {
-    background-color: $color;
-  }
-}
+// Sass Reference
+//
+// Styleguide 1.4
+
+// Variables
+//
+// <table class="tsg-variables-table">
+// <thead>
+// <tr>
+// <th>Name</th>
+// <th>Type</th>
+// <th>Default value</th>
+// <th>Description</th>
+// </tr>
+// </thead>
+// <tbody>
+// <tr>
+// <td>`$tsg-colors`</td>
+// <td>Map</td>
+// <td>
+// <pre>
+// (
+//   // Primary colour
+//   'picton-blue': #62B3E5,
+//   // Blue in user interfaces
+//   'curious-blue': #2C89C3,
+//   // Supporting colours
+//   'deep-blush': #E56385,
+//   'apple': #6CC04A,
+//   'cornflower': #F78D2D,
+//   // Secondary colours
+//   'cornflower-1': #9ACAEB,
+//   'bahama-blue': #0065A0,
+//   'azalea': #F0B3CA,
+//   'razzmatazz': #D51067,
+//   'yellow-green': #BDE093,
+//   'fun-green': #00833E,
+//   'macaroni-and-cheese': #FFBE85,
+//   'tenn': #D75F00,
+// )
+// </pre>
+// </td>
+// <td>Tieto branding colors and supporting colors.</td>
+// </tr>
+// <tr>
+// <td>`$tsg-grayscale`</td>
+// <td>Map</td>
+// <td>
+// <pre>
+// (
+//   'white': #fff,
+//   'alabaster': #F8F8F8,
+//   'iron': #EEEFF0,
+//   'mercury': #E5E3E3,
+//   'alto': #D2D2D2,
+//   'silver': #C1C1C1,
+//   'silver-chalice': #999,
+//   'boulder': #7B7B7B,
+//   'dove-grey': #5E5E5E,
+//   'mine-shaft': #333,
+//   'black': #000,
+// )
+// </pre>
+// </td>
+// <td>Tieto branding colors and supporting colors.</td>
+// </tr>
+// </tbody>
+// </table>
+//
+// Styleguide 1.4.1
+
+// Mixins
+//
+// We use these mixins to build the final CSS output of this component. You can use the mixins yourself to build your own class structure out of our components.
+//
+// Styleguide 1.4.2
+
+// @todo 
+// styleguide:ignore:start
+//
+// <h3>tsg-get-color</h3>
+// <h4>tsg-get-color</h4>
+// <code><pre>@include tsg-get-color($color)</pre></code>
+// <pre><code>@include tsg-get-color($color)</code></pre>
+// <div class="docs-code"><code>@include tsg-get-color($color)</code></div>
+// Returns the hex value of the color name from either `$tsg-colors` or `$tsg-grayscale`.
+// <table class="tsg-variables-table">
+// <thead>
+// <tr>
+// <th>Parameter</th>
+// <th>Type</th>
+// <th>Default value</th>
+// <th>Description</th>
+// </tr>
+// </thead>
+// <tbody>
+// <tr>
+// <td>`$tsg-colors`</td>
+// <td>Map</td>
+// <td>
+// <pre>
+// </pre>
+// </td>
+// <td>Tieto branding colors and supporting colors.</td>
+// </tr>
+// <tr>
+// <td>`$tsg-grayscale`</td>
+// <td>Map</td>
+// <td>
+// <pre>
+// </pre>
+// </td>
+// <td>Tieto branding colors and supporting colors.</td>
+// </tr>
+// </tbody>
+// </table>
+//
+// styleguide:ignore:end
+//
+
+// Functions
+//
+// Styleguide 1.4.3
