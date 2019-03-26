@@ -22,21 +22,42 @@
 //  }
 //}
 
-// Colors
+// Primary color
 //
-// An info cards with the colors and description.
+// Blue is Tieto's primary colours, and it should be the main colour in all our channels. Blue is combined with white or near to white colours to create a light and fresh appearance.
 //
-// .white - #fff
-// .black - #000
-//// Primary colour
-// .picton-blue - #8ae463
-//// Blue in user interfaces
-// .curious-blue - #2C89C3
-//// Supporting colours
+// .picton-blue - #8AE463
+//
+// markup: <div class="color {$modifiers}"></div>
+//
+// Styleguide 1.1
+
+// Blue in user interfaces
+//
+// This blue can be used in user interfaces for better contrast and readability than the primary color.
+//
+// .curious-blue - #2C89C3, Blue in user interfaces
+//
+// markup: <div class="color {$modifiers}"></div>
+//
+// Styleguide 1.2
+
+// Supporting colors
+//
+// The supporting colours can be used to support the main blue colour discreetly, to e.g. draw attention to buttons. When combining colors, please refer to provided examples and good visibility standards. Test the readability of texts with a contrast checker. Keep in mind different screens and different levels of eye sight of users.
+//
 // .deep-blush - #E56385
 // .apple - #6CC04A
 // .cornflower - #F78D2D
-//// Secondary colours
+//
+// markup: <div class="color {$modifiers}"></div>
+//
+// Styleguide 1.3
+
+// Secondary colors
+//
+// Secondary colors are lighter and darker versions of the four main colours. Sometimes these colours are needed in user interfaces to improve readability or to make the look and feel calmer.
+//
 // .cornflower-1 - #9ACAEB
 // .bahama-blue - #0065A0
 // .azalea - #F0B3CA
@@ -46,32 +67,40 @@
 // .macaroni-and-cheese - #FFBE85
 // .tenn - #D75F00
 //
-// markup:
-// <div class="color {$modifiers}"></div>
+// markup: <div class="color {$modifiers}"></div>
 //
-// Styleguide 1.1
+// Styleguide 1.4
 
 // Grayscale
 //
-// An info cards with the colors and description.
+// Greyscale palette is used in many different cases from light background colours to bodytext colour #333333.
 //
-// .white - #fff
-// .black - #000
-//// Greyscale colours
 // .alabaster - #F8F8F8
 // .iron - #EEEFF0
 // .mercury - #E5E3E3
 // .alto - #D2D2D2
 // .silver - #C1C1C1
-// .silver-chalice - #999
+// .silver-chalice - #999999
 // .boulder - #7B7B7B
 // .dove-grey - #5E5E5E
-// .mine-shaft - #333
+// .mine-shaft - #333333
 //
-// markup:
-// <div class="color {$modifiers}"></div>
+// markup: <div class="color {$modifiers}"></div>
 //
-// Styleguide 1.2
+// Styleguide 1.5
+
+// Extras
+//
+// These are not officially part of Tieto branding colors, but the variables / classes are available and it is preferred to use these rather than directly assign colors.
+//
+// .white - #FFFFFF
+// .black - #000000
+//
+// markup: <div class="color {$modifiers}"></div>
+//
+// Styleguide 1.6
+
+@include tsg-color;
 
 // Working with color maps
 //
@@ -82,13 +111,11 @@
 //
 // The colors are stored in two variable maps, `$tsg-colors` and `$tsg-grayscale`. To get a single color from the map in SCSS, you can use the function `tsg-get-color('picton-blue')`, which will search both maps and return the hex value of the color name passed to the function.
 //
-// Styleguide 1.3
-
-@include tsg-color;
+// xStyleguide 1.7
 
 // Sass Reference
 //
-// Styleguide 1.4
+// xStyleguide 1.4
 
 // Variables
 //
@@ -155,13 +182,13 @@
 // </tbody>
 // </table>
 //
-// Styleguide 1.4.1
+// xStyleguide 1.4.1
 
 // Mixins
 //
 // We use these mixins to build the final CSS output of this component. You can use the mixins yourself to build your own class structure out of our components.
 //
-// Styleguide 1.4.2
+// xStyleguide 1.4.2
 
 // @todo 
 // styleguide:ignore:start
@@ -208,4 +235,6 @@
 
 // Functions
 //
-// Styleguide 1.4.3
+// xStyleguide 1.4.3
+
+@include add-foundation-colors;
