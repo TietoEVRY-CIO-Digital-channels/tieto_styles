@@ -39,11 +39,11 @@ $button-color-alt: map-get($tsg-grayscale, 'mine-shaft');
 
 /// Border radius for buttons, defaulted to global-radius.
 /// @type Number
-$button-radius: $global-radius !default;
+$button-radius: $global-radius;
 
 /// Border width for hollow outline buttons
 /// @type Number
-$button-hollow-border-width: 1px !default;
+$button-hollow-border-width: 1px;
 
 /// Sizes for buttons.
 /// @type Map
