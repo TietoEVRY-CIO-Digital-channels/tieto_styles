@@ -1,5 +1,6 @@
 // All base variables, mixins and functions needed by Tieto Styles.
 @import '../base/index';
+@import 'node_modules/foundation-sites/scss/components/button';
 
 ////
 /// @group button
@@ -23,7 +24,7 @@ $button-fill: solid !default;
 
 /// Default background color for buttons.
 /// @type Color
-$button-background: $primary-color !default;
+$button-background: #3399CC;
 
 /// Background color on hover for buttons.
 /// @type Color
@@ -56,7 +57,16 @@ $button-sizes: (
 
 /// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
 /// @type Map
-$button-palette: $foundation-palette;
+$button-palette: (
+    primary: $button-background,
+    secondary: #e5e5e5,
+    success: #28A834,
+    warning: map-get($tsg-colors, 'cornflower'),
+    alert: #DD3A76,
+    hollowx: #D2D2D2,
+    ghost: #D2D2D2,
+    outline: #FFFFFF,
+);
 
 /// opacity for a disabled button.
 /// @type List
@@ -85,12 +95,14 @@ $button-responsive-expanded: false !default;
 
 // Background color on hover for buttons.
 $tsg-button-palette--hover: (
-    primary:  map-get($tsg-colors, 'bahama-blue'),
-    secondary: map-get($tsg-grayscale, 'mercury'),
-    success: map-get($tsg-colors, 'fun-green'),
+    primary: #286090,
+    secondary: #F1F1F1,
+    success: #00833E,
     warning: map-get($tsg-colors, 'tenn'),
-    alert: map-get($tsg-colors, 'razzmatazz'),
-    hollow: map-get($tsg-colors, 'curious-blue'),
+    alert: #D51067,
+    hollow:#3399CC,
+    ghost: #3399CC,
+    outline: #3399CC,
 );
 
 // Size and padding adjustments for different sizes of buttons.
@@ -112,7 +124,6 @@ $tsg-button-sizes: (
     ),
 );
 
-
 $tsg-button__text-transform: uppercase;
 $tsg-button__letter-spacing: -0.002em;
 $tsg-button__font-weight: 500; // @todo This should be assigned to an existing more generic typography related variable.
@@ -131,23 +142,25 @@ $tsg-button__radius--round: 100px;
 // Set the background color of each kind of button on hover.
 @mixin tsg-button-color {
   @each $key, $color in $tsg-button-palette--hover {
-    &.#{$key} {
+    &.#{$key}:not(.hollow) {
       @include tsg-hover-styles {
         background-color: $color;
+
+        &.ghost,
+        &.outline { // @todo Ghost and Outline styles should be in their own mixin.
+          color: map-get($tsg-grayscale, 'white');
+        }
       }
     }
   }
 }
 
-// Apply colors to hollow (ghost) buttons.
-@mixin tsg-button-hollow {
-  &.hollow {
-    @include tsg-link-colors(map-get($tsg-grayscale, 'mine-shaft'), map-get($tsg-grayscale, 'white'), map-get($tsg-grayscale, 'white'), map-get($tsg-grayscale, 'mine-shaft'), map-get($tsg-grayscale, 'white'));
-    border-color: map-get($tsg-grayscale, 'mercury');
+@mixin tsg-button($background: transparent) {
+  background: $background;
+  border-color: map-get($button-palette, 'ghost');
 
-    @include tsg-hover-styles {
-      border-color: map-get($tsg-colors, 'curious-blue');
-    }
+  &:hover {
+    border-color: transparent; // @todo if the button height is lacking 2px, this can be changed to match the hover color. Could it be added to the hover mixin?
   }
 }
 
@@ -158,7 +171,14 @@ $tsg-button__radius--round: 100px;
   .button {
     @include tsg-button-size;
     @include tsg-button-color;
-    @include tsg-button-hollow;
+
+    &.ghost{
+      @include tsg-button(transparent);
+    }
+
+    &.outline {
+      @include tsg-button(white);
+    }
 
     text-transform: $tsg-button__text-transform;
     letter-spacing: $tsg-button__letter-spacing;

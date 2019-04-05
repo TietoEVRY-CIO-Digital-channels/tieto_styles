@@ -12,11 +12,14 @@
 // <p>Make sure that the text of the button is descriptive. If for some reason, your button contains no readable text (for example, just a symbol or icon), add screen reader-only text to the button to clarify its purpose. The symbol or icon should be wrapped in an element with the attribute `aria-hidden="true"`, to prevent screen readers from trying to pronounce the symbol.</p>
 // <p>Use the `.show-for-sr` class to define screen reader-only text.</p>
 //
+// .button - Button
 // .primary - primary
 // .secondary - secondary
 // .success - success
 // .alert - alert
 // .warning - warning
+// .ghost - Ghost
+// .outline - Outline
 //
 // markup:
 // <button class="button {$modifiers}">{$modifiers} button</button>
@@ -67,7 +70,7 @@
 // <button class="button {$modifiers}">Button with shadow</button>
 // <a href class="button {$modifiers}">Link with shadow</a>
 //
-// Styleguide 4.5
+// Styleguide 4.4
 
 // Disabled
 //
@@ -77,11 +80,11 @@
 // <button class="button {$modifiers}">{$modifiers} button</button>
 // <a href class="button {$modifiers}">{$modifiers} link</a>
 //
-// Styleguide 4.6
+// Styleguide 4.5
 
-// Hollow (Ghost) button
+// Ghost button
 //
-// .hollow - Hollow (Ghost)
+// .ghost - Ghost button
 //
 // markup:
 // <button class="button {$modifiers}">{$modifiers}</button>
@@ -91,13 +94,29 @@
 
 // Outline button with background
 //
-// .hollow - Hollow (Ghost)
+// .outline - Outline button
 //
 // markup:
 // <button class="button {$modifiers}">{$modifiers}</button>
 // <a href class="button {$modifiers}">{$modifiers}</a>
 //
 // Styleguide 4.8
+
+// Basic Hollow button from Foundation
+//
+// This `.hollow` style is not in use by Tieto Styles, but available from Foundation. Use `.ghost` or `.outline` if possible according to Tieto Styles.
+//
+// .hollow - Hollow button
+// .hollow.primary - Hollow button, Primary
+// .hollow.secondary - Hollow button, Secondary
+// .hollow.success - Hollow button, Success
+// .hollow.alert - Hollow button, Alert
+//
+// markup:
+// <button class="button {$modifiers}">{$modifiers}</button>
+// <a href class="button {$modifiers}">{$modifiers}</a>
+//
+// Styleguide 4.9
 
 // Hollow (Ghost) button round
 //
@@ -109,7 +128,7 @@
 // <button class="button {$modifiers}">{$modifiers}</button>
 // <a href class="button {$modifiers}">{$modifiers}</a>
 //
-// Styleguide 4.9
+// Styleguide 4.10
 
 // Round buttons
 //
@@ -120,7 +139,7 @@
 // <button class="button success {$modifiers}">{$modifiers}</button>
 // <button class="button secondary {$modifiers}">{$modifiers}</button>
 //
-// Styleguide 4.10
+// Styleguide 4.11
 
 // styleguide:ignore:start
 // This demo probably doesn't need to be recreated and can't be without icons yet.
@@ -133,7 +152,7 @@
 // <button class="button {$modifiers}">{$modifiers}</button>
 // <a href class="button {$modifiers}">{$modifiers}</a>
 //
-// Styleguide 4.11
+// Styleguide 4.12
 
 // styleguide:ignore:end
 
