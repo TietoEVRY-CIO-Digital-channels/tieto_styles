@@ -31,10 +31,10 @@
 
 // Button sizes
 //
-// .tiny - Tiny
-// .small - Small
-// .button - Default
 // .large - Large
+// .button - Default (medium)
+// .small - Small
+// .tiny - Tiny (xsmall)
 // .expanded - Expanded
 // .small.expanded - Small expanded
 //
@@ -43,6 +43,18 @@
 // <a href class="button {$modifiers}">{$modifiers} link</a>
 //
 // Styleguide 4.1
+
+// Button sizes inline
+//
+// This is the same as previous section, but shown inline for comparison.
+//
+// markup:
+// <button class="button large">Large</button>
+// <button class="button">button</button>
+// <button class="button small">Small</button>
+// <button class="button tiny">Tiny</button>
+//
+// Styleguide 4.1.1
 
 // Yes / no
 //

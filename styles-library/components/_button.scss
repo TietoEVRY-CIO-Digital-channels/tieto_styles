@@ -12,7 +12,7 @@ $button-font-family: inherit !default;
 
 /// Padding inside buttons.
 /// @type List
-//$button-padding: 15px 40px; // Overridden anyway with our own mixin.
+$button-padding: 15px;
 
 /// Margin around buttons.
 /// @type List
@@ -93,6 +93,9 @@ $button-transition: all 0.3s ease 0s;
 /// @type Boolean
 $button-responsive-expanded: false !default;
 
+// Min-width for default buttons.
+$tsg-button-min-width: 170px;
+
 // Background color on hover for buttons.
 $tsg-button-palette--hover: (
     primary: #286090,
@@ -112,15 +115,12 @@ $tsg-button-sizes: (
         'padding': 7px 15px,
     ),
     small: (
-        'min-width': 100px,
+        'min-width': 150px,
         'padding': 9px 0,
-    ),
-    default: (
-        'min-width': 170px
     ),
     large: (
         'min-width': 200px,
-        'padding': 19px 60px,
+        'padding': 19px,
     ),
 );
 
@@ -132,6 +132,8 @@ $tsg-button__radius--round: 100px;
 
 // Apply additional changes to affect button sizes.
 @mixin tsg-button-size {
+  min-width: $tsg-button-min-width;
+
   @each $size, $styles in $tsg-button-sizes {
     &.#{$size} {
       @include tsg-apply-styles($styles);
