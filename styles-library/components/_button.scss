@@ -155,15 +155,17 @@ $tsg-button__radius--round: 100px;
   }
 }
 
-@mixin tsg-button($background: transparent) {
-  background: $background;
-  border-color: map-get($button-palette, 'ghost');
+// Applies background and border colors for Tieto hollow-type buttons that differ from Foundation hollow buttons.
+@mixin tsg-button-hollow($background: map-get($tsg-button-palette--hover(primary)), $border: map-get($button-palette, ghost)) {
+  background-color: $background;
+  border-color: $border;
 
   &:hover {
-    border-color: transparent; // @todo if the button height is lacking 2px, this can be changed to match the hover color. Could it be added to the hover mixin?
+    border-color: transparent; // @todo if the button height is lacking 2px, this can be changed to match the $border color.
   }
 }
 
+// Tieto buttons.
 @mixin tsg-button {
   // Buttons are built on Foundation and will not work without this.
   @include foundation-button;
@@ -172,12 +174,12 @@ $tsg-button__radius--round: 100px;
     @include tsg-button-size;
     @include tsg-button-color;
 
-    &.ghost{
-      @include tsg-button(transparent);
+    &.ghost {
+      @include tsg-button-hollow(transparent);
     }
 
     &.outline {
-      @include tsg-button(white);
+      @include tsg-button-hollow(map-get($tsg-grayscale, 'white'));
     }
 
     text-transform: $tsg-button__text-transform;
