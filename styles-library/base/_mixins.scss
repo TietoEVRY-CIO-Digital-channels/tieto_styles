@@ -1,3 +1,37 @@
+// @todo This could be moved to a helper file but at the moment is only used by pseudo-el() mixin.
+%pseudos {
+  content: '';
+  position: absolute;
+}
+
+// Pseudo :before / :after helper misin.
+// @param {Element} $el [ before] - Pseudo element, either `before` or `after`.
+// @param {Width} $el-width [0] - Element width.
+// @param {Height} $el-height [0] - Element height.
+@mixin pseuso-el($el: before, $el-width: 0, $el-height: 0) {
+  @if $el == "before" or $el == "after" {
+    &:#{$el} {
+      @extend %pseudos;
+      width: $el-width;
+      height: $el-height;
+      @content;
+    }
+  }
+  @else {
+    @warn "`#{$el}` is not a valid pseudo-element.";
+  }
+}
+
+// @todo Should be removed when Foundation or other clearfix is in place.
+// Clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin iterate-map($map) {
   @each $key, $value in $map {
     &.#{$key} {
