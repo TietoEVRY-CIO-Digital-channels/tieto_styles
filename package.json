@@ -13,6 +13,7 @@
   "author": "Brainsum",
   "homepage": "https://github.com/brainsum/tieto_styles",
   "devDependencies": {
+    "@angular/cli": "^7.3.9",
     "foundation-sites": "^6.5.2",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2",
