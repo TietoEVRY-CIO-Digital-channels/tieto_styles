@@ -2,27 +2,40 @@
 
 Generic Tieto style components. To be used for consistency within internal applications.
 
+## Contact info
 
+- Eriks Tikaize eriks.tikaize@tieto.com - environment questions and integration to other projects.
+- Vojtech Jaros vojtech.jaros@tieto.com - styleguide implementation.
+- Liisa Duerig liisa.duerig@tieto.com - styleguide implementation, info on approved designs, any other questions.
+- Kaisa Nummela kaisa.nummela@tieto.com - if no one else knows, she does.
+- Peter Ponya pedro@brainsum.com - repository and permissions. (external)
 
-## Installation and Setup
+## How to include in projects
 
-### NPM
-Install it.
-        
-### Git
-Branches:
-- 1.x - Old, not in use and nothing relevant here, to be deleted.
-- 2.x - Has been modified to 3.x, can probably be deleted.
-- 3.x - Main branch, running on demo server, should be renamed to master or something ovbious.
+Include SCSS files from the folder 'styles-library'.
 
+Contact Eriks Tikaize for info.
+
+## Development and contribution
+
+We would love if others want to help out. If you need a component that isn't here, check the materials available to make sure it's aligned with Tieto's design standards, and feel free to clone, make a feature branch and a pull request. We are happy to help you get started with that, feel free to contact us. See contact info above. 
+
+### Prerequisites
+- NPM (installation varies depending on your environment)
+- Git
 
 ### Local environment
-Contact 
-- Peter Ponya pedro@brainsum.com for questions regarding repository and permissions.
-- Eriks Tikaize eriks.tikaize@tieto.com for environment questions and implementation to other projects.
-- Liisa Duerig liisa.duerig@tieto.com for questions regarding the styleguide.
 
-Clone the repository, start your local server. Check Git section for information on branches.
+Clone the repository, start your local server.
+        
+Repository:
+- https://github.com/brainsum/tieto_styles
+
+Branches:
+- 1.x - [deprecated] Old, not in use and nothing relevant here, to be deleted.
+- 2.x - [deprecated] Has been modified to 3.x, can probably be deleted.
+- 3.x - Main branch, running on demo server, should be renamed to master or something obvious.
+
 
 ```
 git clone git@github.com:brainsum/tieto_styles.git
@@ -39,7 +52,7 @@ Start your server:
 
 Navigate to http://localhost:3000/
 
-## Watch
+### Watch
 Check the gulpfile for tasks that can be run to automate watch. With these instructions, local changes will not always be visible without restart. [Liisa can fill this in]
 
 Use this to regenerate the styleguide (it doesn't start watch):
@@ -88,6 +101,12 @@ nohup ensures that the server is running in daemon mode and will not stop when t
 Checking logs
 ```tail -f tsg.log````
 
+## stuff worth checking
+- smacss.com
+- bem.info
+- [Foundation docs]
+- [sc5 docs]
+- [sc5 build options]
 
 ## Working with the styleguide
 
@@ -125,4 +144,3 @@ The development process is based on the SC5 styleguide tool, so the files locate
 
 ### Build
 To build the style guide type 'gulp styleguide' it will build the guide into the 'docs' folder. (DOESNT WORK)
-
