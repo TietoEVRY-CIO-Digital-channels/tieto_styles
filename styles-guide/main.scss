@@ -29,7 +29,7 @@
 
 @import 'shame';
 
-// @TODO
+// @TODO and README additional info
 //
 // Document libraries in use. Foundation? Breakpoint? Compass?
 // Document how to work with this - running, readme, etc
@@ -37,6 +37,42 @@
 // stykles-library is what to share with other projects. It may not be npm. It is dependent on Foundation, at least variables. How to do this?
 //
 // Styleguide 0
+
+// Old installation / setup info from Brainsum
+//
+//## Installation (old)
+//These steps are old and should be deleted if not necessary. May be copy paste from Brainsum.
+//
+//### Composer
+//    Add this as a repository in your composer.json file
+//```
+//{
+//"type": "vcs",
+//"url": "https://github.com/brainsum/tieto_styles"
+//}
+//```
+//We are using alpha release, add minimum stability:
+//```
+//"minimum-stability": "dev",
+//"prefer-stable": true,
+//```
+//- Require as a dev dependency
+//```
+//composer require --dev brainsum/tieto_styles:^1.0
+//```
+//
+//### NPM
+//    In terminal type:
+//```
+//npm i brainsum/tieto_styles#2.x
+//```
+//
+//Or add to package.json file:
+//```
+//"tieto_styles": "github:brainsum/tieto_styles#2.x"
+//```
+//
+// Styleguide 0.1
 
 // Tables and pagination
 //
