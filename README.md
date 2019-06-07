@@ -82,13 +82,11 @@ This library is a continous work in progress, If you want to participate, your h
 We are happy to help you get started with that, feel free to contact us. See section contact info above.
 
 ### SC5 styleguide tool
-As it has already been mentioned here, this styleguide uses [SC5](https://github.com/SC5/sc5-styleguide) tool for creating styleguides quickly and easily.
+As it has already been mentioned here, this styleguide uses [SC5](https://github.com/SC5/sc5-styleguide) tool for creating styleguides quickly and easily. Therefore, it is quite important to check what it's about before you start diving into developing this styleguide.
 
-Built on KSS documenting syntax
-http://warpspire.com/kss/
+SC5 itself uses [KSS](http://warpspire.com/kss) syntax within SCSS files to generate the styleguide.
 
-Build options
-https://github.com/SC5/sc5-styleguide#build-options
+Build options for SC5: https://github.com/SC5/sc5-styleguide#build-options
 
 ### Prerequisites for running the styleguide locally on your machine
 - Node.js
@@ -190,7 +188,7 @@ Alternatively, you can check the whole log file through text editor of your choi
 
 ## Template for standalone
 
-@TODO - no idea what was meant to be here. Liisa?
+@TODO - no idea what was meant to be here, Liisa.
 
 ## Build
 @TODO: Should we keep this if it does not work? What exactly is this Build anyway?
@@ -199,7 +197,7 @@ To build the style guide type 'gulp styleguide' it will build the guide into the
 ## Watch
 (@TODO: refactor this section, need more info from Liisa/Eriks - what is this "Watch"? Elaborate please.)
 
-Check the gulpfile for tasks that can be run to automate watch. With these instructions, local changes will not always be visible without restart. [Liisa can fill this in]
+Check the gulpfile for tasks that can be run to automate watch. With these instructions, local changes will not always be visible without restart. [@TODO Liisa can fill this in]
 
 (@TODO: shouldn't this following text be elsewhere in the readme? In different section...)
 Use this to regenerate the styleguide if needed (it doesn't start watch):
