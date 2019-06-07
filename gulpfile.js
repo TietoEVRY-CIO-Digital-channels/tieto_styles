@@ -37,7 +37,7 @@ gulp.task('styleguide:generate:build', function() {
         server: false,
         rootPath: outputPath,
         appRoot: '.',
-        overviewPath: 'README.md'
+        overviewPath: 'OVERVIEW.md'
       }))
     .pipe(gulp.dest(outputPath));
 });
