@@ -1,0 +1,77 @@
+/*--------------------------------------------*/
+/* Override for default SC5 styleguide colors */
+/*--------------------------------------------*/
+
+/* @TODO import our Tieto colors and use variables instead of static values (problem with path pointing towards npm package, not root) */
+
+$primary-color: #62B3E5;                          /* picton-blue */
+$secondary-color: #F8F8F8;                        /* alabaster */
+$tertiary-color: $secondary-color;
+$default-action-color: #2C89C3;                   /* curious-blue */
+$header-text-color: $secondary-color;
+$main-section-header-source-text-color: #5E5E5E;  /* dove-grey */
+
+/*-----------------------------------------*/
+/* Custom Tieto Styleguide styles override */
+/*-----------------------------------------*/
+
+@define-mixin styleguide_custom_styles {
+
+  /* Styles for Tieto logo located in header */
+  .tieto-logo {
+    fill: white;
+    width: 70px;
+    height: 50px;
+    position: relative;
+    top: 16px;
+  }
+
+  /* Hide >> symbbol used for toggling navbar */
+  .full-height.sg.sg-wrapper {
+    .sg.side-nav-toggle {
+      display: none !important;
+    }
+  }
+
+  /* Zero top margin for navbar, to counter the empty space left after nav bar toggle */
+  .sg-side-nav {
+    .sg.sg-nav-section {
+      margin-top: 0 !important;
+    }
+  }
+
+  /* Reduced top padding for the content body, to reduce unnecessary gap between header and content */
+  .sg-wrapper.full-height {
+    padding-top: 40px !important;
+  }
+
+  /* Search box alignment/centering within the header */
+  .sg-search-container.side-nav-search {
+    .sg.sg-search-field {
+      margin-top: 20px;
+    }
+  }
+
+  /* Reduced max width of nav-bar to give more space for content. Tweaked right padding and margin to create bigger space between nav bar and content */
+  .full-height.sg.sg-wrapper {
+    .sg.sg-side-nav {
+      margin-right: 10px !important;
+      padding-right: 10px !important;
+      max-width: 25% !important;
+    }
+  }
+
+  /* Vertical line visually separating navbar from content */
+  .full-height.sg.sg-wrapper {
+    .sg.sg-side-nav {
+      border-right: solid 1px #D2D2D2 !important;
+    }
+  }
+
+  /* Reduced left gap for navbar sub-categories/sub-items */
+  .sg-nav-item {
+    .sg-nav-subsection {
+      padding-left: 0 !important;
+    }
+  }
+}
