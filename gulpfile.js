@@ -17,6 +17,7 @@ gulp.task('styleguide:generate:dev', function() {
         showReferenceNumbers: true,
         commonClass: 'tsg',
         customColors: 'docs/css/_styleguide_colors_override.scss',
+        favIcon: 'docs/assets/img/tieto-favicon.ico',
         //port: 3001,
         server: true
       }))
@@ -40,6 +41,7 @@ gulp.task('styleguide:generate:build', function() {
         rootPath: outputPath,
         appRoot: '.',
         customColors: 'docs/css/_styleguide_colors_override.scss',
+        favIcon: 'docs/assets/img/tieto-favicon.ico',
         //port: 3001,
         overviewPath: 'OVERVIEW.md'
       }))
