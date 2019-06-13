@@ -11,11 +11,13 @@ gulp.task('styleguide:generate:dev', function() {
         title: 'Tieto Styleguide',
         server: true,
         rootPath: tempPath,
-        overviewPath: 'README.md',
+        overviewPath: 'OVERVIEW.md',
         disableEncapsulation: true,
         sideNav: true,
         showReferenceNumbers: true,
         commonClass: 'tsg',
+        customColors: 'docs/css/_styleguide_colors_override.scss',
+        //port: 3001,
         server: true
       }))
     .pipe(gulp.dest(tempPath));
@@ -37,6 +39,8 @@ gulp.task('styleguide:generate:build', function() {
         server: false,
         rootPath: outputPath,
         appRoot: '.',
+        customColors: 'docs/css/_styleguide_colors_override.scss',
+        //port: 3001,
         overviewPath: 'OVERVIEW.md'
       }))
     .pipe(gulp.dest(outputPath));

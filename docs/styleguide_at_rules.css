@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Lovicons';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Lovicons.eot");
+  src: url("../fonts/Lovicons.eot?#iefix") format("embedded-opentype"), url("../fonts/Lovicons.woff") format("woff"), url("../fonts/Lovicons.ttf") format("truetype"), url("../fonts/Lovicons.svg#fontawesome") format("svg");
+}
