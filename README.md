@@ -1,9 +1,34 @@
-# Tieto styles
+# Table of contents
+- [Tieto styleguide general info](#tieto_styleguide)
+  - [Contact info](#contact_info)
+  - [What's in the box](#whats_in_the_box)
+    - [Folder/file structure](#folder/file_structure)
+- [How to include in your project](#how_to_include_in_your_project)
+- [How to use in your project](#how_to_use_in_your_project)
+  - [SCSS](#scss)
+  - [CSS](#css)
+- [Development and contribution](#development_and_contribution)
+  - [SC5 styleguide tool](#sc5_stylegugide_tool)
+  - [Prerequisites for running the styleguide locally](#prerequisites_for_running_the_styleguide_locally)
+  - [Branches](#branches)
+  - [Local environment setup](#local_environment_setup)
+  - [Deployment to DEMO](#deployment_to_demo)
+  - [Logging](#logging)
+  - [Watch](#watch)
+  - [Materials worth checking](#materials_worth_checking)
 
-Generic Tieto style components. To be used for consistency within internal applications.
-This is a library of components 
+# Tieto styleguide
+
+Stylesheet library containing common Tieto styles, colours, typography and components. To be used for consistency and non-redundant work within internal applications.
+
+Previous version of styleguide should be mostly up-to-date but it'll not be maintained in the future:
+https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+
+Even older version, same case as above, will not be maintained in the future:
+https://wiki.intra.tieto.com/xwiki/bin/view/User+Experience+guidelines/
 
 ## Contact info
+(@TODO would be good having the contact list here as well as in the online documentation itself)
 
 - Eriks Tikaize, eriks.tikaize@tieto.com - environment questions and integration to other projects.
 - Vojtech Jaros, vojtech.jaros@tieto.com - styleguide implementation.
@@ -11,74 +36,23 @@ This is a library of components
 - Kaisa Nummela, kaisa.nummela@tieto.com - if no one else knows, she does.
 - Peter Ponya, pedro@brainsum.com - repository and permissions. (external)
 
-## How to include in projects
-
-Include SCSS files from the folder 'styles-library'.
-
-@todo This section should be elaborated more clearly. @Eriks?
-- Usage as angular components, if the project is Angular?
-- Usage as a CSS framework, by adding classes in markup
-- Usage by including raw scss and using mixins in your own scss
-- Other ways to use?
-
-## Development and contribution
-
-This library is a work in progress, If you want to participate, your help is needed and welcome! If you need a component that isn't here or have an improvement, check the materials available to make sure it's aligned with Tieto's design standards, and feel free to clone, make a feature branch and a pull request. We are happy to help you get started with that, feel free to contact us. See contact info above. 
-
-### Prerequisites
-- NPM (installation varies depending on your environment)
-- Git
-
-### Local environment
-
-Clone the repository, start your local server.
-        
-Repository:
-- https://github.com/brainsum/tieto_styles
-
-Branches:
-- 1.x - [deprecated] Old, not in use and nothing relevant here, to be deleted.
-- 2.x - [deprecated] Has been modified to 3.x, can probably be deleted.
-- 3.x - Main branch, running on demo server, should be renamed to master or something obvious.
-
-
-```
-git clone git@github.com:brainsum/tieto_styles.git
-cd tieto_styles
-git checkout 3.x
-npm install
-```
-If errors or warnings on install:
-```npm audit fix```
-
-Start your server:
-```npm start```
-
-Navigate to http://localhost:3000/
-
-### Watch
-Check the gulpfile for tasks that can be run to automate watch. With these instructions, local changes will not always be visible without restart. [Liisa can fill this in]
-
-Use this to regenerate the styleguide if needed (it doesn't start watch):
-
-```gulp styleguide:generate:dev```
-
-## What's in the Box?
-
-### File Structure
+## What's in the box?
+### Folders/files structure
 
 The SCSS files in this project are grouped into 2 folders:
-- styles-library - This includes the actual styles which would be included in other projects.
-- styles-guide - This includes the code comments needed to generate the standalone styleguide and any additional styles needed only for the styleguide which would not be used on any other project.
+- **styles-library** - This includes the actual styles library which is meant to be included in other projects.
+- **styles-guide** - This includes the code comments needed to generate the standalone styleguide and any additional styles needed only for the styleguide itself which is **not meant to be** used on any other project.
 
-Note that the SCSS partials are organized based on SMACSS http://smacss.com/ concepts into subfolders. Below is an example of what this structure might look like.
+This styleguide is using the [SC5 styleguide tool](https://github.com/SC5/sc5-styleguide), so the files located in folder "styles-library" need to be developed in tandem with the styleguide definition files located in folder "style-guide". The guide watches all SCSS files and changes/reloads accordingly.
+
+Note that the SCSS partials are organized based on [SMACSS](http://smacss.com/) concepts into subfolders. Below is an example of what this structure might look like.
 - base - Set it and forget it. There should not be class selectors in these files.
   - _variables.scss
   - _colors.scss
   - _reset.scss (This is usually taken care of by a framework and not needed to add yourself.)
-  - _mixinss.sscss
-  - _functions.scsss
-- vendor - Configurable variables provided by 3rd parties. No custom SCSS here. 
+  - _mixins.scss
+  - _functions.scss
+- vendor - Configurable variables provided by 3rd parties. No custom SCSS here.
   - foundation-sites
     - _settings.scss
 - layout - Styles related to page layout. If using a grid system, there shouldn't be much here.
@@ -86,137 +60,155 @@ Note that the SCSS partials are organized based on SMACSS http://smacss.com/ con
   - _print.scss
 - components - Separate components of the website, most custom code and overrides will be here.
   - _button.scss
-  - _forms.scss
-  - _input.scss
-  - _dialog.scss
-  - _toast.scss
-  - _menu.sscss
-  - _menu-item.scss
-  - ... etc....
+  - _card.scss
+  - _menu.scss
 - state - This is for components in different states, e.g. .button:hover. Often these changes are simple and can be included with the component itself, but sometimes it makees sense to put them here instead.
   - _menu-item.scss - might contain:
-     .menu-item.is-expanded {}
-     .menu-item.is-active {}
+  -  .menu-item.is-expanded {}
+  -  .menu-item.is-active {}
 - theme - Theme variations, e.g. if one section of the site is promotional and should have a different color theme.
   - _blogs.scss
   - _news.scss
-  
-### Best practices
-- In the styles-library folder which should be usable by other projects, wrap your scss in logical mixins so they do not generate CSS just by importing the file. This allows the end user to choose if they want to only use some parts of your styles. Foundation for Sites does this well, check their partials for examples.
-- Component specific variables should be at the top of every partial. Even if you are directly assigning `$input-margin: $global-margin`, if it is a value reused in many places in the file, consider creating a component specific variable. Putting them at the top of the file ensuress that they are easy to find.
-- No numbers, colors, etc, in the SCSS.
-Wrong:
+
+# How to include in your project
+(@TODO this sections should be present in the documentation, redundant here)
+
+- NPM package.
+- Git submodule.
+- @TODO: Gem for RoR applications.
+- @TODO: Raw pre-compiled CSS files download and manual installation into project.
+- @TODO: Raw SCSS files download and manual installation into project.
+
+# How to use in your project
+(@TODO this section should be present in the documentation, redundant here)
+
+The approach of using this stylesheet library could be separated into two basic categories. Please note, that we highly encourage you to use the SCSS version. Simply because it gives you bigger power in the actual usage of this library within your project thanks to mixins, variables and other SCSS features.
+
+## SCSS (**Recommended**)
+Used by incorporating mixins and variables in your own SCSS and/or using classes in your markup etc. Don't forget to @import our SCSS files into your files first.
+
+## CSS
+Used by incorporating classes in your markup. No variables, mixins and other SCSS features present in this version, obviously. This option is for applications that do not use any CSS pre-processor or are using different one other than SCSS.
+
+@TODO: Eriks?   Usage as angular components, if the project is Angular?
+
+# Development and contribution
+(@TODO this section should be present in the documentation. If somebody is reading this Readme, he already has access to repo and is probably meant to participate in the development...)
+
+This library is a continous work in progress, If you want to participate, your help is needed and welcome! If you need a component that isn't here or have an improvement, check the materials available (@TODO link to official materials?) to make sure it's aligned with Tieto's design standards (@TODO link to official materials?), and feel free to clone, make a feature branch and a pull request.
+
+We are happy to help you get started with that, feel free to contact us. See section contact info above.
+
+## SC5 styleguide tool
+As it has already been mentioned here, this styleguide uses [SC5](https://github.com/SC5/sc5-styleguide) tool for creating styleguides quickly and easily. Therefore, it is quite important to check what it's about before you start diving into developing this styleguide.
+
+SC5 itself uses [KSS](http://warpspire.com/kss) syntax within SCSS files to generate the styleguide.
+
+Build options for SC5: https://github.com/SC5/sc5-styleguide#build-options
+
+## Prerequisites for running the styleguide locally
+- Node.js
+- NPM
+- Git
+
+## Branches:
+- 1.x - [**Deprecated**] Old, not in use and nothing relevant here, to be deleted.
+- 2.x - [**Deprecated**] Has been modified to 3.x, can probably be deleted.
+- 3.x - Main branch, running on demo server, should be renamed to master or something obvious.
+
+## Local environment setup
+
+1. Clone the repository **`git clone git@github.com:brainsum/tieto_styles.git`** or through your Git client.
+2. Move into the folder of this styleguide **`cd tieto_styles`**.
+3. Checkout to the correct up-to-date branch **`git checkout 3.x`**.
+4. NPM install all dependencies for this library **`npm install`**.
+5. Start your local server **`npm start`**.
+6. Go to [localhost](http://localhost:3000/) in your browser.
+
+If you encounter errors or warnings on install, run **`npm audit fix`**.
+
+## Deployment to DEMO
+1. Login to demo server (no password, handled via SSH keys) **`ssh tsg@demo-intra.tieto.com`**
+2. Navigate to styleguide's folder **`cd /home/tsg/tieto_styles`**
+3. Verify you are on correct branch **`git status`** ( currently branch 3.x). If there are changes that need to be stashed, contact Eriks or Liisa for more info if needed.
+4. Pull latest changes **`git pull`**.
+5. Install dependencies via npm **`npm install`**.
+6. If you encounter errors or warnings (same as with local installation), run **`npm audit fix`**.
+7. Kill existing NPM process to stop the server.
+  - The process ID will vary, so let's find the ID first **`ps -ef | grep npm`**.
+  - The result of that will look similarly to following:
     ```
-    // All of these should be variables.
-    .my-component {
-      color: #ff0000;
-      font-size: 18px;
-      margin-bottom: 1rem;
-    }
+    tsg       5849     1  0 May07 ?        00:00:00 npm
+    tsg      23701 22062  0 12:21 pts/1    00:00:00 grep npm
     ```
-Correct:
-    ```
-    // Variables defined at top of file, re-using existing variables where sensible.
-    $component-color: #FF0000;
-    $component-font-size: map-deep-get($header-styles, 'small', 'h4', 'font-size'); // Gets the font-size of h4 elements from Foundation settings.
-    
-    // By wrapping in smaller mixins, we allow the end user to choose if they want to include our entire component style definitions or only part of them.
-    @mixin component-font-styles($font-size: $base-font-size) { // Allowing to pass a variable with a default makes the mixin more versatile.
-      @debug '$font-size is #{$font-size}';
-      font-size: $font-size;
-      margin-bottom: $global-margin;
-    }
-    
-    @mixin my-component {
-      .my-component {
-        @include component-font-styles($component-font-size);
-        color: $component-color;
-      }
-    }
-    ```
-    
-- Don't forget that Sass has a lot of built-in features making it more like a programming language than writing CSS.
-  - https://sass-lang.com/documentation
-  - http://thesassway.com
+  - Kill the NPM process **`kill 5849`**.
+8. Restart the server **`nohup npm start > tsg.log 2>&1 &`** - nohup ensures that the server is running in daemon mode and will not stop when the session is closed.
 
-## Deployment to Demo
-Login to demo (no password)
-```
-ssh tsg@demo-intra.tieto.com
-cd /home/tsg/tieto_styles
-```
 
-Sanity check
-```git status```
-Verify you are on correct branch, currently 3.x. If there are changes that need to be stashed, contact Eriks or Liisa for more info if needed.
+## Best practices
+- In the styles-library folder which should be usable by other projects, wrap your SCSS in logical mixins so they do not generate CSS just by importing the file. This allows the end user to choose if they want to only use some parts of your styles. [Foundation for Sites](https://foundation.zurb.com) does this well, check their partials for examples.
+- Component specific variables should be at the top of every partial. Even if you are directly assigning **`$input-margin: $global-margin`**, if it is a value reused in many places in the file, consider creating a component specific variable. Putting them at the top of the file ensuress that they are easy to find.
+- Try to use variables as much as possible.
 
-Get latest changes.
+ **Wrong:**
+
+All of these should be variables.
 
 ```
-git pull
-npm install
+.my-component {
+  color: #ff0000;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
 ```
-If errors or warnings (as with local installation):
-```npm audit fix```
 
-Kill existing NPM process (stop the server). 
-The process ID will vary, but as an example:
-```ps -ef | grep npm```
-Will display
-```````
-tsg       5849     1  0 May07 ?        00:00:00 npm
-tsg      23701 22062  0 12:21 pts/1    00:00:00 grep npm
+  **Correct:**
+
+  Variables defined at top of file, re-using existing variables where sensible.
+
 ```
-So:
-```kill 5849```
-And it's dead.  
+$component-color: #FF0000;
+$component-font-size: map-deep-get($header-styles, 'small', 'h4', 'font-size');
+```
 
-Restarting the server
-```nohup npm start > tsg.log 2>&1 &```
-nohup ensures that the server is running in daemon mode and will not stop when the session is closed.
+**`map-deep-get`** Gets the font-size of h4 elements from Foundation settings.
 
-Checking logs
-```tail -f tsg.log````
 
-## stuff worth checking
-- smacss.com
-- bem.info
-- [Foundation docs]
-- [sc5 docs]
-- [sc5 build options]
+By wrapping in smaller mixins, we allow the end user to choose if they want to include our entire component style definitions or only part of them.
 
-## Working with the styleguide
+Possibility to pass a variable with a default value `($font-size: $base-font-size)` makes the mixin more versatile.
 
-SC5-Styleguide, parses SCSS comments for a standalone component library.
 
-Currently existing styles, should be most up-to-date but this tool will not be maintained in the future:
-https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
+ ```
+@mixin component-font-styles($font-size: $base-font-size)
+  @debug '$font-size is #{$font-size}';
+  font-size: $font-size;
+  margin-bottom: $global-margin;
+}
+```
 
-SC5-styleguide
-https://github.com/SC5/sc5-styleguide
+```
+@mixin my-component {
+  .my-component {
+    @include component-font-styles($component-font-size);
+    color: $component-color;
+  }
+}
+```
 
-Built on KSS documenting syntax
-http://warpspire.com/kss/
+Don't forget that Sass has a lot of built-in features making it more like a programming language than writing CSS. See https://sass-lang.com/documentation or http://thesassway.com.
 
-Build options
-https://github.com/SC5/sc5-styleguide#build-options
+## Logging
 
-Check links in the Additional Info section of the github project. There are some useful things for advanced techniques.
+You can check logs on DEMO environment (locally, you can check the log in the terminal where you NPM started the styleguide) by navigating into the folder of styleguide and running command **`tail -f tsg.log`**.
 
-### Template for standalone
+Alternatively, you can check the whole log file through text editor of your choice (nano for example) or **`cat`** command.
 
-@TODO
+## Watch
+Watcher works for most files, although it does not watch for changes in for example README.md file or SC5 stylesheets for the styleguide itself. To start the watcher, use **`npm start`** instead of **`gulp styleguide:generate:dev`** (which will start the app server after generating, but will not watch for changes).
 
-## Usage
-Include SCSS files from the folder 'styles-library'.
-
-## Style Guide
-Style guide is generated by SC5 styleguide generator and its files reside in '/style-guide'.
-
-### Development
-To develop the style guide type 'npm start' it will open up a server on port localhost:3000. (WORKS)
-
-The development process is based on the SC5 styleguide tool, so the files located in folder "styles-library" need to be developed in tandem with the styleguide definition files located in folder "style-guide". The gude watches all SCSS files an changes/ reloads accordingly.
-
-### Build
-To build the style guide type 'gulp styleguide' it will build the guide into the 'docs' folder. (DOESNT WORK)
+## Materials worth checking
+- [SMACSS conventions](Smacss.com)
+- [BEM conventions](Bem.info)
+- [Foundation framework docs](https://foundation.zurb.com/sites/docs/)
+- [SC5 docs](https://github.com/SC5/sc5-styleguide)
