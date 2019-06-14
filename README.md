@@ -2,7 +2,7 @@
 - [Tieto styleguide general info](#tieto-styleguide)
   - [Contact info](#contact-info)
   - [What's in the box](#whats-in-the-box)
-    - [Folder/file structure](#folder%2Ffile-structure)
+    - [Folder/file structure](#folders-and-files-structure)
 - [How to include in your project](#how-to-include-in-your-project)
 - [How to use in your project](#how-to-use-in-your-project)
   - [SCSS](#scss)
@@ -37,7 +37,7 @@ https://wiki.intra.tieto.com/xwiki/bin/view/User+Experience+guidelines/
 - Peter Ponya, pedro@brainsum.com - repository and permissions. (external)
 
 ## What's in the box?
-### Folders/files structure
+### Folders and files structure
 
 The SCSS files in this project are grouped into 2 folders:
 - **styles-library** - This includes the actual styles library which is meant to be included in other projects.
