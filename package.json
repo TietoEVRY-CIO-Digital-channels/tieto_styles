@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "gulp styleguide:dev",
-    "build": "gulp styleguide:build"
+    "build": "gulp styleguide:build",
+    "postinstall": "patch-package"
   },
   "author": "Brainsum",
   "homepage": "https://github.com/brainsum/tieto_styles",
@@ -17,7 +18,8 @@
     "foundation-sites": "^6.5.2",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2",
-    "sc5-styleguide": "2.2.0"
+    "sc5-styleguide": "2.2.0",
+    "patch-package" : "^6.1.2"
   },
   "dependencies": {}
 }
