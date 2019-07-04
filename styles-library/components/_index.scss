@@ -1,0 +1,6 @@
+// ******************************************************************************************************************************************************
+// Import all Tieto components here (in correct order), so that it's possible to import a single file elsewhere instead of all components
+// For correct order, see file styles-library/_index.scss
+// ******************************************************************************************************************************************************
+@import '/button'
+@import '/card'

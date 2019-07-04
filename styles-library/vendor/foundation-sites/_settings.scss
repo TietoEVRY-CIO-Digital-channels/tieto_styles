@@ -1,8 +1,18 @@
+// ********************************************************************************************************************************************************************
+// These are the settings available from Foundation. Import this file to have the variables available and @todo finish this sentence Liisa
+//
+// Workflow:
+//  - Either customize them here to fit Tieto styles. (Variables with !default are initial values from Foundation. Without !default, these are Tieto's custom variables.)
+//  - Or create a new file within styles-library, copy paste the block of variables from here to the file and edit to your needs.
+//    Comment out the original variables block here and keep it for future reference.
+//    Also don't forget to @import your newly created file in the specific block.
+//
+// All variables are uncommented, but not all components are used and customized.
+// Feel free to make a pull request with a customized component, if it belongs to Tieto's common styles and hasn't yet been implemented.
+//
+// ********************************************************************************************************************************************************************
+
 @import '../../base/index';
-
-// This is the settings available from Foundation. We customize them here to fit Tieto styles. Inport this file to have the variables available and @todo finish this sentence.
-
-// All variables are uncommented, but not all components are used. See comments on each section to know if the component has been customized for Tieto's use. If there's no comment, it's not customized. Feel free to make a pull request with a customized component, if it belongs to Tieto's common styles and hasn't yet been completed.
 
 //  Foundation for Sites Settings
 //  -----------------------------
@@ -65,12 +75,7 @@
 //  54. Tooltip
 //  55. Top Bar
 //  56. Xy Grid
-
-// @todo This import path is weird.
-//@import 'util/util';
-//@import "../../../node_modules/foundation-sites/scss/util/util";
-
-// All variables defined with !default are initial values from Foundation. Without !default, these are Tieto's own custom variables.
+// ------------------------------------------
 
 // 1. Global
 // ---------
@@ -289,6 +294,8 @@ $breadcrumbs-item-separator-color: $medium-gray !default;
 
 // 11. Button
 // ----------
+@import '../../components/button';
+
 //$button-font-family: inherit !default;
 //$button-padding: 15px 40px;
 //$button-margin: 0 0 $global-margin 0 !default;
@@ -336,15 +343,15 @@ $callout-link-tint: 30% !default;
 
 // 14. Card
 // --------
-
-$card-background: $white !default;
-$card-font-color: $body-font-color !default;
-$card-divider-background: $light-gray !default;
-$card-border: none !default; // @todo done. 1px solid $light-gray !default;
-$card-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.08); //none !default;
-$card-border-radius: $global-radius !default;
-$card-padding: $global-padding;
-$card-margin-bottom: $global-margin * 2;
+//
+// $card-background: $white !default;
+// $card-font-color: $body-font-color !default;
+// $card-divider-background: $light-gray !default;
+// $card-border: none !default; // @todo done. 1px solid $light-gray !default;
+// $card-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.08); //none !default;
+// $card-border-radius: $global-radius !default;
+// $card-padding: $global-padding;
+// $card-margin-bottom: $global-margin * 2;
 
 // 15. Close Button
 // ----------------

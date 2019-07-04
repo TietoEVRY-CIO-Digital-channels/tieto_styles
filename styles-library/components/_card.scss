@@ -1,0 +1,47 @@
+// ***************************************************************************************************************************
+// Import Foundation card, taken as a base for our custom Tieto card
+// ***************************************************************************************************************************
+@import 'node_modules/foundation-sites/scss/components/card';
+
+// @TODO to be styled to fit Tieto styles/branding
+
+////
+/// @group card
+////
+
+/// Default background color.
+/// @type Color
+$card-background: $white !default;
+
+/// Default font color for cards.
+/// @type Color
+$card-font-color: $body-font-color !default;
+
+/// Default background.
+/// @type Color
+$card-divider-background: $light-gray !default;
+
+/// Default border style.
+/// @type List
+$card-border: 1px solid $light-gray !default;
+
+/// Default card shadow.
+/// @type List
+$card-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.08);   //none !default;
+
+/// Default border radius.
+/// @type List
+$card-border-radius: $global-radius !default;
+
+/// Default padding.
+/// @type Number
+$card-padding: $global-padding !default;
+
+/// Default bottom margin.
+/// @type number
+$card-margin-bottom: $global-margin !default;
+
+@mixin tsg-card {
+  include foundation-card;
+}
+

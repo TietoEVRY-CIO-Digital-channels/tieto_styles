@@ -1,19 +1,91 @@
+// ******************************************************************************************************************************
+// List of default Foundation components, use this list to:
+//  - figure out the proper order of @including Foundation components
+//  - figure out what already exists in Foundation framework and what can we take as a base for future Tieto custom components
+// ******************************************************************************************************************************
+// @include foundation-global-styles;
+// @include foundation-forms;
+// @include foundation-typography;
+//
+// // Grids
+// @if not $flex {
+//   @include foundation-grid;
+// }
+// @else {
+//   @if $xy-grid {
+//     @include foundation-xy-grid-classes;
+//   }
+//   @else {
+//     @include foundation-flex-grid;
+//   }
+// }
+//
+// @include foundation-button;
+// @include foundation-button-group;
+// @include foundation-close-button;
+// @include foundation-label;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-callout;
+// @include foundation-card;
+// @include foundation-dropdown;
+// @include foundation-pagination;
+// @include foundation-tooltip;
+// @include foundation-accordion;
+// @include foundation-media-object;
+// @include foundation-orbit;
+// @include foundation-responsive-embed;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-menu;
+// @include foundation-menu-icon;
+// @include foundation-accordion-menu;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown-menu;
+// @include foundation-off-canvas;
+// @include foundation-reveal;
+// @include foundation-sticky;
+// @include foundation-title-bar;
+// @include foundation-top-bar;
+//
+// // Helpers
+// @include foundation-float-classes;
+// @if $flex { @include foundation-flex-classes; }
+// @include foundation-visibility-classes;
+// @if $prototype { @include foundation-prototype-classes; }
 
-// Import Foundation variable !defaults and mixins.
+
+// ***************************************************************************************************************************
+// Import Foundation !default variables and mixins.
+// ***************************************************************************************************************************
 @import '../node_modules/foundation-sites/scss/foundation';
 
-@import 'base/variables';
-@import 'base/functions';
-@import 'base/mixins';
-@import 'base/colors';
-@import 'base/typography';
 
+// ***************************************************************************************************************************
+// Import default Foundation settings with variables
+// ***************************************************************************************************************************
 @import 'vendor/foundation-sites/settings';
 
 
-//@include foundation-everything(); // @todo Not this. This is just for development purposes, let's not include everything.
+// ***************************************************************************************************************************
+// Import base needed for each component, this includes colours, variables, etc.
+// ***************************************************************************************************************************
+@import 'base/index';
 
-// @todo This is where we should import/include all of our styles-library.
+
+// ***************************************************************************************************************************
+// Import custom Tieto Styleguide components
+// ***************************************************************************************************************************
+@import 'components/index';
+
+
+// ***************************************************************************************************************************
+// A mixin, that contains everything from this library
+// ***************************************************************************************************************************
 @mixin tsg-everything(
   $flex: true,
   $prototype: false
@@ -22,68 +94,9 @@
     $global-flexbox: true !global;
   }
 
-  // Global styles
+  // Include individual Tieto custom components (order matters, see list of components above)
   @include foundation-global-styles;
-  //@include foundation-forms;
   @include foundation-typography;
-  //
-  //// Grids
-  //@if not $flex {
-  //  @include foundation-grid;
-  //}
-  //@else {
-  //  @if $xy-grid {
-  //    @include foundation-xy-grid-classes;
-  //  }
-  //  @else {
-  //    @include foundation-flex-grid;
-  //  }
-  //}
-  //
-  // Generic components
-  //@include foundation-button;
-  //@include foundation-button-group;
-  //@include foundation-close-button;
-  //@include foundation-label;
-  //@include foundation-progress-bar;
-  //@include foundation-slider;
-  //@include foundation-switch;
-  //@include foundation-table;
-  //// Basic components
-  //@include foundation-badge;
-  //@include foundation-breadcrumbs;
-  //@include foundation-callout;
-  //@include foundation-card;
-  //@include foundation-dropdown;
-  //@include foundation-pagination;
-  //@include foundation-tooltip;
-  //
-  //// Containers
-  //@include foundation-accordion;
-  //@include foundation-media-object;
-  //@include foundation-orbit;
-  //@include foundation-responsive-embed;
-  //@include foundation-tabs;
-  //@include foundation-thumbnail;
-  //// Menu-based containers
-  //@include foundation-menu;
-  //@include foundation-menu-icon;
-  //@include foundation-accordion-menu;
-  //@include foundation-drilldown-menu;
-  //@include foundation-dropdown-menu;
-  //
-  //// Layout components
-  //@include foundation-off-canvas;
-  //@include foundation-reveal;
-  //@include foundation-sticky;
-  //@include foundation-title-bar;
-  //@include foundation-top-bar;
-  //
-  //// Helpers
-  //@include foundation-float-classes;
-  //@if $flex { @include foundation-flex-classes; }
-  //@include foundation-visibility-classes;
-  //@if $prototype { @include foundation-prototype-classes; }
+  @include tsg-button;
+  @include tsg-card;
 }
-
-@include tsg-everything;
