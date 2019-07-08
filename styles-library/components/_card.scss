@@ -1,7 +1,7 @@
 // ***************************************************************************************************************************
 // Import Foundation card, taken as a base for our custom Tieto card
 // ***************************************************************************************************************************
-@import 'node_modules/foundation-sites/scss/components/card';
+@import '../../node_modules/foundation-sites/scss/components/card';
 
 // @TODO to be styled to fit Tieto styles/branding
 
@@ -42,6 +42,6 @@ $card-padding: $global-padding !default;
 $card-margin-bottom: $global-margin !default;
 
 @mixin tsg-card {
-  include foundation-card;
+  @include foundation-card;
 }
 
