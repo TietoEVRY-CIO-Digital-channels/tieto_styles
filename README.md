@@ -19,7 +19,7 @@
 
 # Tieto styleguide
 
-Stylesheet library containing common Tieto styles, colours, typography and components. To be used for consistency and non-redundant work within internal applications.
+This is a stylesheet library containing common Tieto styles, colours, typography and components. To be used for consistency and non-redundant work within internal applications.
 
 Previous version of styleguide should be mostly up-to-date but it'll not be maintained in the future:
 https://company-81847.frontify.com/d/VHfNy7brWRvI/tieto-style-guide#/introduction/overview
@@ -32,16 +32,14 @@ https://wiki.intra.tieto.com/xwiki/bin/view/User+Experience+guidelines/
 
 - Eriks Tikaize, eriks.tikaize@tieto.com - environment questions and integration to other projects.
 - Vojtech Jaros, vojtech.jaros@tieto.com - styleguide implementation.
-- Liisa Duerig, liisa.duerig@tieto.com - styleguide implementation, info on approved designs, any other questions.
 - Kaisa Nummela, kaisa.nummela@tieto.com - if no one else knows, she does.
-- Peter Ponya, pedro@brainsum.com - repository and permissions. (external)
 
 ## What's in the box?
 ### Folders and files structure
 
 The SCSS files in this project are grouped into 2 folders:
-- **styles-library** - This includes the actual styles library which is meant to be included in other projects.
-- **styles-guide** - This includes the code comments needed to generate the standalone styleguide and any additional styles needed only for the styleguide itself which is **not meant to be** used on any other project.
+- **styles-library** - The actual styles library which is meant to be included in other projects.
+- **styles-guide** - The code comments needed to generate the standalone styleguide and any additional styles needed only for the styleguide itself which is **not meant to be** used on any other project.
 
 This styleguide is using the [SC5 styleguide tool](https://github.com/SC5/sc5-styleguide), so the files located in folder "styles-library" need to be developed in tandem with the styleguide definition files located in folder "style-guide". The guide watches all SCSS files and changes/reloads accordingly.
 
@@ -126,24 +124,6 @@ Build options for SC5: https://github.com/SC5/sc5-styleguide#build-options
 6. Go to [localhost](http://localhost:3000/) in your browser.
 
 If you encounter errors or warnings on install, run **`npm audit fix`**.
-
-## Deployment to DEMO
-1. Login to demo server (no password, handled via SSH keys) **`ssh tsg@demo-intra.tieto.com`**
-2. Navigate to styleguide's folder **`cd /home/tsg/tieto_styles`**
-3. Verify you are on correct branch **`git status`** ( currently branch 3.x). If there are changes that need to be stashed, contact Eriks or Liisa for more info if needed.
-4. Pull latest changes **`git pull`**.
-5. Install dependencies via npm **`npm install`**.
-6. If you encounter errors or warnings (same as with local installation), run **`npm audit fix`**.
-7. Kill existing NPM process to stop the server.
-  - The process ID will vary, so let's find the ID first **`ps -ef | grep npm`**.
-  - The result of that will look similarly to following:
-    ```
-    tsg       5849     1  0 May07 ?        00:00:00 npm
-    tsg      23701 22062  0 12:21 pts/1    00:00:00 grep npm
-    ```
-  - Kill the NPM process **`kill 5849`**.
-8. Restart the server **`nohup npm start > tsg.log 2>&1 &`** - nohup ensures that the server is running in daemon mode and will not stop when the session is closed.
-
 
 ## Best practices
 - In the styles-library folder which should be usable by other projects, wrap your SCSS in logical mixins so they do not generate CSS just by importing the file. This allows the end user to choose if they want to only use some parts of your styles. [Foundation for Sites](https://foundation.zurb.com) does this well, check their partials for examples.
